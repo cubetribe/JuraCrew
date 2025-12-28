@@ -1,82 +1,82 @@
-# Legal-GodMode Agenten-Dokumentation
+# Legal-GodMode Agent Documentation
 
-Diese Datei beschreibt alle verfügbaren Spezial-Agenten, ihre Aufgaben, Model-Zuordnung und Einsatzgebiete.
+This file describes all available specialized agents, their tasks, model assignments, and areas of deployment.
 
 ---
 
-## Übersicht
+## Overview
 
-| Agent | Model | Expertise | Primäre Aufgabe | Token-Intensität |
+| Agent | Model | Expertise | Primary Task | Token Intensity |
 |-------|-------|-----------|-----------------|------------------|
-| @anwalt-zivilrecht | Opus 4.5 | BGB, HGB, ZPO | Zivilrechtliche Mandatsbearbeitung | Hoch |
-| @anwalt-strafrecht | Opus 4.5 | StGB, StPO | Strafrechtliche Mandatsbearbeitung | Hoch |
-| @anwalt-verwaltung | Opus 4.5 | VwGO, VwVfG | Verwaltungsrechtliche Mandatsbearbeitung | Hoch |
-| @gutachter | Opus 4.5 | Alle Rechtsgebiete | Tiefe Subsumtion, Gutachten | Sehr Hoch |
-| @recherche | Sonnet 4.5 | Alle Rechtsgebiete | Gesetz/Rechtsprechung/Literatur | Mittel |
-| @formular | Sonnet 4.5 | Alle Rechtsgebiete | Schriftsätze, Verträge, Vorlagen | Niedrig |
-| @mandatsmanager | Sonnet 4.5 | Kanzleiorganisation | Fristen, Aktenführung | Niedrig |
+| @anwalt-zivilrecht | Opus 4.5 | BGB, HGB, ZPO | Civil law mandate processing | High |
+| @anwalt-strafrecht | Opus 4.5 | StGB, StPO | Criminal law mandate processing | High |
+| @anwalt-verwaltung | Opus 4.5 | VwGO, VwVfG | Administrative law mandate processing | High |
+| @gutachter | Opus 4.5 | All legal areas | Deep subsumption, opinions | Very High |
+| @recherche | Sonnet 4.5 | All legal areas | Statute/Case law/Literature | Medium |
+| @formular | Sonnet 4.5 | All legal areas | Pleadings, contracts, templates | Low |
+| @mandatsmanager | Sonnet 4.5 | Law firm organization | Deadlines, file management | Low |
 
 ---
 
 ## 1. @anwalt-zivilrecht (Opus 4.5)
 
 ### Expertise
-- Bürgerliches Recht (BGB)
-- Handelsrecht (HGB)
-- Zivilprozessrecht (ZPO)
-- Vertragsrecht
-- Deliktsrecht
-- Familienrecht
-- Erbrecht
+- Civil Code (BGB)
+- Commercial Code (HGB)
+- Civil Procedure Code (ZPO)
+- Contract Law
+- Tort Law
+- Family Law
+- Inheritance Law
 
-### Primäre Aufgaben
-- Mandatsanalyse und Fallprüfung
-- Anspruchsgrundlagen identifizieren
-- Erfolgsaussichten bewerten
-- Prozessstrategie entwickeln
-- Klage-/Antragsschriften vorbereiten
+### Primary Tasks
+- Mandate analysis and case review
+- Identify legal bases for claims
+- Assess prospects of success
+- Develop litigation strategy
+- Prepare complaints/motions
 
-### Typische Inputs
+### Typical Inputs
 ```
-"Neues Mandat: Kaufpreiszahlung § 433 BGB"
-"Quick Check: Schadensersatz aus Verkehrsunfall"
-"Prozessstrategie: Mietstreit - Nebenkosten"
+"New mandate: Purchase price payment § 433 BGB"
+"Quick Check: Damages from traffic accident"
+"Litigation strategy: Rental dispute - ancillary costs"
 ```
 
-### Output-Format
+### Output Format
 ```markdown
-# Mandatsanalyse - [Mandats-Nr.] - [Datum]
+# Mandate Analysis - [Mandate No.] - [Date]
 
-## I. Sachverhalt
-[Anonymisierter Sachverhalt]
+## I. Facts
+[Anonymized facts]
 
-## II. Rechtliche Würdigung
+## II. Legal Assessment
 
-### A. Anspruchsgrundlage
+### A. Legal Basis
 1. § XYZ BGB
-   a) Tatbestand
+   a) Elements
       aa) Definition
-      bb) Subsumtion
-   b) Rechtsfolge
+      bb) Subsumption
+   b) Legal Consequence
 
-### B. Erfolgsaussichten
-[Bewertung mit Fundstellen]
+### B. Prospects of Success
+[Assessment with references]
 
-## III. Handlungsempfehlung
-[Nächste Schritte]
+## III. Recommendation for Action
+[Next steps]
 
-## IV. Fristen
-- [Frist 1]: [Datum]
-- [Frist 2]: [Datum]
+## IV. Deadlines
+- [Deadline 1]: [Date]
+- [Deadline 2]: [Date]
 
 ---
-Fundstellen:
+References:
 - BGH NJW 2024, 123
 - OLG München BeckRS 2024, 456
 - Palandt/Grüneberg § 433 Rn. 12
 ```
 
-### Workflow-Integration
+### Workflow Integration
 ```
 @recherche → @anwalt-zivilrecht → @formular → @mandatsmanager
 ```
@@ -86,66 +86,66 @@ Fundstellen:
 ## 2. @anwalt-strafrecht (Opus 4.5)
 
 ### Expertise
-- Strafgesetzbuch (StGB)
-- Strafprozessordnung (StPO)
-- Nebenstrafrecht
-- Strafzumessung
-- Verteidigungsstrategien
+- Criminal Code (StGB)
+- Code of Criminal Procedure (StPO)
+- Ancillary Criminal Law
+- Sentencing
+- Defense Strategies
 
-### Primäre Aufgaben
-- Strafbarkeitsanalyse
-- Tatbestandsprüfung
-- Rechtswidrigkeit/Schuld prüfen
-- Verteidigungsstrategie entwickeln
-- Strafzumessung bewerten
+### Primary Tasks
+- Criminal liability analysis
+- Review of elements of crime
+- Examine unlawfulness/culpability
+- Develop defense strategy
+- Assess sentencing
 
-### Typische Inputs
+### Typical Inputs
 ```
-"Neues Mandat: Betrug § 263 StGB"
-"Quick Check: Körperverletzung § 223 StGB"
-"Verteidigungsstrategie: Fahrlässige Tötung"
+"New mandate: Fraud § 263 StGB"
+"Quick Check: Assault § 223 StGB"
+"Defense strategy: Negligent homicide"
 ```
 
-### Output-Format
+### Output Format
 ```markdown
-# Strafrechtsanalyse - [Mandats-Nr.] - [Datum]
+# Criminal Law Analysis - [Mandate No.] - [Date]
 
-## I. Sachverhalt
-[Anonymisierter Sachverhalt]
+## I. Facts
+[Anonymized facts]
 
-## II. Strafbarkeit
+## II. Criminal Liability
 
 ### A. § XYZ StGB
-1. Tatbestand
-   a) Objektiver Tatbestand
-      aa) Tatobjekt
-      bb) Tathandlung
-      cc) Taterfolg
-      dd) Kausalität
-   b) Subjektiver Tatbestand
-      aa) Vorsatz/Fahrlässigkeit
-2. Rechtswidrigkeit
-3. Schuld
+1. Elements
+   a) Objective Elements
+      aa) Object of Crime
+      bb) Criminal Act
+      cc) Criminal Result
+      dd) Causation
+   b) Subjective Elements
+      aa) Intent/Negligence
+2. Unlawfulness
+3. Culpability
 
-### B. Strafzumessung
-[§ 46 StGB Faktoren]
+### B. Sentencing
+[§ 46 StGB Factors]
 
-## III. Verteidigungsstrategie
-[Empfohlene Strategie]
+## III. Defense Strategy
+[Recommended strategy]
 
-## IV. Fristen
-- Akteneinsicht: [Datum]
-- Stellungnahme: [Datum]
-- Hauptverhandlung: [Datum]
+## IV. Deadlines
+- File inspection: [Date]
+- Statement: [Date]
+- Main trial: [Date]
 
 ---
-Fundstellen:
+References:
 - BGH NStZ 2024, 123
 - BVerfG NJW 2024, 456
 - Fischer StGB § 263 Rn. 12
 ```
 
-### Workflow-Integration
+### Workflow Integration
 ```
 @recherche → @anwalt-strafrecht → @formular → @mandatsmanager
 ```
@@ -155,68 +155,68 @@ Fundstellen:
 ## 3. @anwalt-verwaltung (Opus 4.5)
 
 ### Expertise
-- Verwaltungsgerichtsordnung (VwGO)
-- Verwaltungsverfahrensgesetz (VwVfG)
-- Baurecht
-- Ausländerrecht
-- Sozialrecht
+- Administrative Court Code (VwGO)
+- Administrative Procedure Act (VwVfG)
+- Building Law
+- Immigration Law
+- Social Law
 
-### Primäre Aufgaben
-- Bescheidprüfung
-- Widerspruchsstrategie
-- Klagebegründung
-- Ermessensabwägung
-- Verfahrensrecht prüfen
+### Primary Tasks
+- Review administrative decisions
+- Opposition strategy
+- Justify complaints
+- Review discretion
+- Examine procedural law
 
-### Typische Inputs
+### Typical Inputs
 ```
-"Neues Mandat: Widerspruch gegen Baugenehmigung"
-"Quick Check: Aufenthaltstitel abgelehnt"
-"Klagestrategie: ALG-II Bescheid"
+"New mandate: Opposition to building permit"
+"Quick Check: Residence permit denied"
+"Complaint strategy: ALG-II decision"
 ```
 
-### Output-Format
+### Output Format
 ```markdown
-# Verwaltungsrechtsanalyse - [Mandats-Nr.] - [Datum]
+# Administrative Law Analysis - [Mandate No.] - [Date]
 
-## I. Sachverhalt
-[Anonymisierter Sachverhalt + Bescheid]
+## I. Facts
+[Anonymized facts + decision]
 
-## II. Rechtmäßigkeit des Bescheids
+## II. Legality of Decision
 
-### A. Formelle Rechtmäßigkeit
-1. Zuständigkeit
-2. Verfahren
+### A. Formal Legality
+1. Jurisdiction
+2. Procedure
 3. Form
 
-### B. Materielle Rechtmäßigkeit
-1. Rechtsgrundlage
-2. Tatbestand
-3. Rechtsfolge/Ermessen
+### B. Material Legality
+1. Legal Basis
+2. Elements
+3. Legal Consequence/Discretion
 
-## III. Rechtsschutz
+## III. Legal Remedy
 
-### A. Widerspruch
+### A. Opposition
 [§§ 68 ff. VwGO]
 
-### B. Anfechtungsklage
+### B. Action for Rescission
 [§ 42 Abs. 1 VwGO]
 
-## IV. Handlungsempfehlung
-[Nächste Schritte]
+## IV. Recommendation for Action
+[Next steps]
 
-## V. Fristen
-- Widerspruchsfrist: [Datum]
-- Klagefrist: [Datum]
+## V. Deadlines
+- Opposition deadline: [Date]
+- Complaint deadline: [Date]
 
 ---
-Fundstellen:
+References:
 - BVerwG NVwZ 2024, 123
 - OVG München BeckRS 2024, 456
 - Kopp/Schenke VwGO § 42 Rn. 12
 ```
 
-### Workflow-Integration
+### Workflow Integration
 ```
 @recherche → @anwalt-verwaltung → @formular → @mandatsmanager
 ```
@@ -226,70 +226,70 @@ Fundstellen:
 ## 4. @gutachter (Opus 4.5)
 
 ### Expertise
-- Alle Rechtsgebiete
-- Tiefe Subsumtion
+- All legal areas
+- Deep subsumption
 - Gutachtenstil
-- Fallanalyse
-- Rechtliche Abwägungen
+- Case analysis
+- Legal balancing
 
-### Primäre Aufgaben
-- Rechtsgutachten erstellen
-- Komplexe Subsumtion durchführen
-- Meinungsstreit darstellen
-- Gegenmeinungen entkräften
-- Ausführliche Fallanalyse
+### Primary Tasks
+- Create legal opinions
+- Perform complex subsumption
+- Present dispute of opinion
+- Refute opposing views
+- Detailed case analysis
 
-### Typische Inputs
+### Typical Inputs
 ```
-"Gutachten: Verkehrsunfall § 823 BGB - Anscheinsbeweis"
-"Subsumtion: Betrug § 263 StGB - Täuschungshandlung"
-"Rechtliche Bewertung: Mietminderung § 536 BGB"
+"Opinion: Traffic accident § 823 BGB - Apparent evidence"
+"Subsumption: Fraud § 263 StGB - Deceptive act"
+"Legal assessment: Rent reduction § 536 BGB"
 ```
 
-### Output-Format
+### Output Format
 ```markdown
-# Rechtsgutachten - [Thema] - [Datum]
+# Legal Opinion - [Topic] - [Date]
 
-## Fragestellung
-[Zu klärende Rechtsfrage]
+## Question
+[Legal question to be clarified]
 
-## Gutachten
+## Opinion
 
-### I. Anspruchsgrundlage/Strafbarkeit
+### I. Legal Basis/Criminal Liability
 [§ XYZ BGB/StGB/VwGO]
 
-### A. Tatbestand
-1. [Tatbestandsmerkmal 1]
+### A. Elements
+1. [Element 1]
    a) Definition
-      aa) Literatur
-      bb) Rechtsprechung
-   b) Subsumtion
-      aa) Sachverhaltsmerkmale
-      bb) Rechtliche Würdigung
-      cc) Zwischenergebnis
-   c) Meinungsstreit
-      aa) Ansicht 1 (h.M.)
-      bb) Ansicht 2 (a.A.)
-      cc) Stellungnahme
+      aa) Literature
+      bb) Case Law
+   b) Subsumption
+      aa) Facts
+      bb) Legal Assessment
+      cc) Interim Result
+   c) Dispute of Opinion
+      aa) View 1 (prevailing view)
+      bb) View 2 (opposing view)
+      cc) Statement
 
-2. [Tatbestandsmerkmal 2]
+2. [Element 2]
    [...]
 
-### B. Rechtsfolge
+### B. Legal Consequence
 [...]
 
-## Ergebnis
-[Zusammenfassung]
+## Result
+[Summary]
 
 ---
-Fundstellen:
-- [Mindestens 5-10 Quellen]
-- BGH/BVerfG Urteile
-- OLG/OVG Urteile
-- Kommentare/Lehrbücher
+References:
+- [At least 5-10 sources]
+- BGH/BVerfG Decisions
+- OLG/OVG Decisions
+- Commentaries/Textbooks
 ```
 
-### Workflow-Integration
+### Workflow Integration
 ```
 @recherche → @gutachter → @formular
 ```
@@ -299,69 +299,69 @@ Fundstellen:
 ## 5. @recherche (Sonnet 4.5)
 
 ### Expertise
-- Gesetzesrecherche
-- Rechtsprechungsrecherche (BGH, BVerfG, OLG, etc.)
-- Literaturrecherche (Kommentare, Lehrbücher)
-- Aktuelle Rechtsentwicklungen
+- Statute research
+- Case law research (BGH, BVerfG, OLG, etc.)
+- Literature research (Commentaries, textbooks)
+- Current legal developments
 
-### Primäre Aufgaben
-- Fundstellen finden
-- Rechtsprechung zusammenfassen
-- Meinungsstand darstellen
-- Gesetzesänderungen identifizieren
+### Primary Tasks
+- Find references
+- Summarize case law
+- Present state of opinion
+- Identify statutory changes
 
-### Typische Inputs
+### Typical Inputs
 ```
-"Recherche: § 433 BGB Rechtsprechung 2024"
-"Recherche: BGH Urteile zu § 823 BGB Verkehrsunfall"
-"Recherche: Literatur zu § 263 StGB Täuschung"
+"Research: § 433 BGB case law 2024"
+"Research: BGH decisions on § 823 BGB traffic accidents"
+"Research: Literature on § 263 StGB deception"
 ```
 
-### Output-Format
+### Output Format
 ```markdown
-# Recherche-Report - [Norm/Thema] - [Datum]
+# Research Report - [Norm/Topic] - [Date]
 
-## Aufgabe
-[Was wurde recherchiert]
+## Task
+[What was researched]
 
-## Gesetzliche Grundlage
+## Statutory Basis
 § XYZ BGB/StGB/VwGO
-[Gesetzestext]
+[Text of statute]
 
-## Rechtsprechung
+## Case Law
 
 ### BGH/BVerfG
 1. **BGH NJW 2024, 123**
-   - Leitsatz: [...]
-   - Relevanz: [...]
+   - Key sentence: [...]
+   - Relevance: [...]
 
 2. **BVerfG NJW 2023, 456**
-   - Leitsatz: [...]
-   - Relevanz: [...]
+   - Key sentence: [...]
+   - Relevance: [...]
 
 ### OLG/OVG
 1. **OLG München BeckRS 2024, 789**
-   - Leitsatz: [...]
-   - Relevanz: [...]
+   - Key sentence: [...]
+   - Relevance: [...]
 
-## Literatur
+## Literature
 
-1. **Palandt/Grüneberg, BGB, 83. Aufl. 2024, § 433 Rn. 12**
-   - Aussage: [...]
+1. **Palandt/Grüneberg, BGB, 83rd ed. 2024, § 433 Rn. 12**
+   - Statement: [...]
 
-2. **MüKo-BGB/Kramer, 9. Aufl. 2024, § 433 Rn. 25**
-   - Aussage: [...]
+2. **MüKo-BGB/Kramer, 9th ed. 2024, § 433 Rn. 25**
+   - Statement: [...]
 
-## Zusammenfassung
-[Herrschende Meinung vs. Mindermeinung]
+## Summary
+[Prevailing view vs. minority view]
 
 ---
-Fundstellen: [Anzahl: mindestens 3-5]
+References: [Number: at least 3-5]
 ```
 
-### Workflow-Integration
+### Workflow Integration
 ```
-@recherche → @anwalt-[rechtsgebiet]
+@recherche → @anwalt-[legal area]
 @recherche → @gutachter
 ```
 
@@ -370,73 +370,73 @@ Fundstellen: [Anzahl: mindestens 3-5]
 ## 6. @formular (Sonnet 4.5)
 
 ### Expertise
-- Schriftsatzerstellung
-- Vertragsgestaltung
-- Template-Management
-- Formelle Korrektheit
+- Pleading drafting
+- Contract design
+- Template management
+- Formal correctness
 
-### Primäre Aufgaben
-- Klagen/Anträge formulieren
-- Widersprüche schreiben
-- Verträge erstellen
-- Templates anpassen
+### Primary Tasks
+- Draft complaints/motions
+- Write oppositions
+- Create contracts
+- Adapt templates
 
-### Typische Inputs
+### Typical Inputs
 ```
-"Klage: Zahlungsanspruch aus Kaufvertrag"
-"Widerspruch: Baugenehmigung"
-"Vertrag: Mietvertrag"
-"Strafanzeige: Betrug § 263 StGB"
+"Complaint: Payment claim from sales contract"
+"Opposition: Building permit"
+"Contract: Rental agreement"
+"Criminal complaint: Fraud § 263 StGB"
 ```
 
-### Output-Format
+### Output Format
 ```markdown
-# [Schriftsatz-Art] - [Mandat] - [Datum]
+# [Pleading Type] - [Mandate] - [Date]
 
-An das
-[Gericht/Behörde]
-[Adresse]
+To the
+[Court/Authority]
+[Address]
 
-In Sachen
-[Kläger/Antragsteller]
+In the matter of
+[Plaintiff/Applicant]
 ./.
-[Beklagter/Antragsgegner]
+[Defendant/Respondent]
 
-Az.: [Aktenzeichen]
+Case No.: [Case Number]
 
-[SCHRIFTSATZ-TYP]
+[PLEADING TYPE]
 
-Sehr geehrte Damen und Herren,
+Dear Sir or Madam,
 
-namens und in Vollmacht der/des Kläger(in)/Antragsteller(in) erhebe ich
+on behalf and with authority of the Plaintiff/Applicant, I hereby file
 
-K l a g e / W i d e r s p r u c h
+C o m p l a i n t / O p p o s i t i o n
 
 [...]
 
-I. Sachverhalt
+I. Facts
 [...]
 
-II. Rechtliche Würdigung
+II. Legal Assessment
 [...]
 
-III. Antrag
+III. Motion
 [...]
 
-Mit vorzüglicher Hochachtung
+Respectfully submitted,
 
-[Unterschrift]
-Rechtsanwalt/Rechtsanwältin
+[Signature]
+Attorney at Law
 
 ---
-Anlagen:
-- Vollmacht
-- [weitere Anlagen]
+Exhibits:
+- Power of Attorney
+- [further exhibits]
 ```
 
-### Workflow-Integration
+### Workflow Integration
 ```
-@anwalt-[rechtsgebiet] → @formular → @mandatsmanager
+@anwalt-[legal area] → @formular → @mandatsmanager
 @gutachter → @formular
 ```
 
@@ -445,92 +445,92 @@ Anlagen:
 ## 7. @mandatsmanager (Sonnet 4.5)
 
 ### Expertise
-- Fristenberechnung (ZPO, StPO, VwGO)
-- Aktenführung
-- Mandatsverwaltung
-- Wiedervorlagen
+- Deadline calculation (ZPO, StPO, VwGO)
+- File management
+- Mandate administration
+- Reminders
 
-### Primäre Aufgaben
-- Fristen berechnen
-- Wiedervorlagen setzen
-- Aktenstruktur erstellen
-- Mandatsnummern vergeben
+### Primary Tasks
+- Calculate deadlines
+- Set reminders
+- Create file structure
+- Assign mandate numbers
 
-### Typische Inputs
+### Typical Inputs
 ```
-"Fristen für Mandat 2025-001"
-"Neue Mandatsakte: Zivilrecht - Kaufvertrag"
-"Wiedervorlage: Schriftsatz-Zustellung"
+"Deadlines for mandate 2025-001"
+"New mandate file: Civil law - Sales contract"
+"Reminder: Pleading service"
 ```
 
-### Output-Format
+### Output Format
 ```markdown
-# Mandatsmanagement - [Mandat] - [Datum]
+# Mandate Management - [Mandate] - [Date]
 
-## Mandatsinfo
-- **Mandats-Nr.**: 2025-XXX
-- **Rechtsgebiet**: [Zivil/Straf/Verwaltung]
-- **Kurzbeschreibung**: [...]
-- **Angelegt**: [Datum]
+## Mandate Info
+- **Mandate No.**: 2025-XXX
+- **Legal Area**: [Civil/Criminal/Administrative]
+- **Brief Description**: [...]
+- **Created**: [Date]
 
-## Fristen
+## Deadlines
 
-| Frist | Datum | Berechnung | Status |
+| Deadline | Date | Calculation | Status |
 |-------|-------|------------|--------|
-| Klageerwiderung | 2025-02-15 | Zustellung + 2 Wochen (§ 276 ZPO) | Offen |
-| Replik | 2025-03-01 | Nach Klageerwiderung | Offen |
+| Response to complaint | 2025-02-15 | Service + 2 weeks (§ 276 ZPO) | Open |
+| Reply | 2025-03-01 | After response to complaint | Open |
 
-## Wiedervorlagen
+## Reminders
 
-- [ ] Akteneinsicht beantragen - bis 2025-01-15
-- [ ] Schriftsatz vorbereiten - bis 2025-02-08
-- [ ] Mandant informieren - bis 2025-01-20
+- [ ] Request file inspection - by 2025-01-15
+- [ ] Prepare pleading - by 2025-02-08
+- [ ] Inform client - by 2025-01-20
 
-## Aktenstruktur
+## File Structure
 ```
-mandates/2025-XXX-[anonymisiert]/
-├── mandat.md
-├── recherche-433-bgb.md
-├── gutachten-final.md
-└── klage-entwurf.md
+mandates/2025-XXX-[anonymized]/
+├── mandate.md
+├── research-433-bgb.md
+├── opinion-final.md
+└── complaint-draft.md
 ```
 
 ---
-Erstellt von @mandatsmanager | Sonnet 4.5 | [Timestamp]
+Created by @mandatsmanager | Sonnet 4.5 | [Timestamp]
 ```
 
-### Workflow-Integration
+### Workflow Integration
 ```
-@anwalt-[rechtsgebiet] → @mandatsmanager
+@anwalt-[legal area] → @mandatsmanager
 @formular → @mandatsmanager
 ```
 
 ---
 
-## Agent-Auswahl Flowchart
+## Agent Selection Flowchart
 
 ```
 START
   ↓
-Neues Mandat?
-  ├─ JA → Welches Rechtsgebiet?
-  │         ├─ Zivilrecht → @recherche → @anwalt-zivilrecht → @formular → @mandatsmanager
-  │         ├─ Strafrecht → @recherche → @anwalt-strafrecht → @formular → @mandatsmanager
-  │         └─ Verwaltung → @recherche → @anwalt-verwaltung → @formular → @mandatsmanager
+New mandate?
+  ├─ YES → Which legal area?
+  │         ├─ Civil Law → @recherche → @anwalt-zivilrecht → @formular → @mandatsmanager
+  │         ├─ Criminal Law → @recherche → @anwalt-strafrecht → @formular → @mandatsmanager
+  │         └─ Administrative → @recherche → @anwalt-verwaltung → @formular → @mandatsmanager
   │
   ├─ Quick Check?
-  │   └─ @anwalt-[rechtsgebiet] → @mandatsmanager
+  │   └─ @anwalt-[legal area] → @mandatsmanager
   │
-  ├─ Gutachten?
+  ├─ Opinion?
   │   └─ @recherche → @gutachter → @formular
   │
-  ├─ Nur Recherche?
+  ├─ Research only?
   │   └─ @recherche
   │
-  ├─ Nur Schriftsatz?
-  │   └─ @anwalt-[rechtsgebiet] → @formular → @mandatsmanager
+  ├─ Pleading only?
+  │   └─ @anwalt-[legal area] → @formular → @mandatsmanager
   │
-  └─ Nur Fristen?
+  └─ Deadlines only?
       └─ @mandatsmanager
 ```
 
@@ -538,31 +538,31 @@ Neues Mandat?
 
 ## Best Practices
 
-### 1. Immer Recherche vor Fachagent (außer Quick Check)
+### 1. Always research before specialist agent (except Quick Check)
 ```
-✅ RICHTIG: @recherche → @anwalt-zivilrecht
-❌ FALSCH: @anwalt-zivilrecht (ohne Recherche bei komplexen Fragen)
-```
-
-### 2. Immer Mandatsmanager am Ende
-```
-✅ RICHTIG: @formular → @mandatsmanager
-❌ FALSCH: @formular (Fristen vergessen!)
+✅ CORRECT: @recherche → @anwalt-zivilrecht
+❌ WRONG: @anwalt-zivilrecht (without research for complex questions)
 ```
 
-### 3. Gutachter für tiefe Analyse
+### 2. Always mandate manager at the end
 ```
-✅ RICHTIG: @gutachter (bei komplexem Meinungsstreit)
-❌ FALSCH: @anwalt-zivilrecht (zu oberflächlich)
+✅ CORRECT: @formular → @mandatsmanager
+❌ WRONG: @formular (deadlines forgotten!)
 ```
 
-### 4. Formular für finale Dokumente
+### 3. Expert for deep analysis
 ```
-✅ RICHTIG: @anwalt-zivilrecht → @formular
-❌ FALSCH: @anwalt-zivilrecht (Entwurf direkt nutzen)
+✅ CORRECT: @gutachter (for complex dispute of opinion)
+❌ WRONG: @anwalt-zivilrecht (too superficial)
+```
+
+### 4. Template for final documents
+```
+✅ CORRECT: @anwalt-zivilrecht → @formular
+❌ WRONG: @anwalt-zivilrecht (use draft directly)
 ```
 
 ---
 
-*Diese Dokumentation beschreibt alle 7 Spezial-Agenten von Legal-GodMode.*
-*Letzte Aktualisierung: 2025-12-28*
+*This documentation describes all 7 specialized agents of Legal-GodMode.*
+*Last Updated: 2025-12-28*

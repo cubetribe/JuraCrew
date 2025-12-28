@@ -1,283 +1,283 @@
 # JuraCrew
 
-> **7 KI-Anwälte, die sich gegenseitig auf die Finger schauen**
+> **7 AI Lawyers Keeping Each Other in Check**
 
-Ein orchestriertes Multi-Agent-System für juristische Analysen - weil ein einzelnes LLM bei Rechtsfragen gerne mal kreativ wird. Und "kreativ" ist bei Jura selten gut.
+An orchestrated multi-agent system for legal analysis - because a single LLM tends to get creative with legal questions. And "creative" is rarely good in law.
 
-Basiert auf dem [Multi-Agent Team Blueprint](https://github.com/cubetribe/ClaudeCode_GodMode-On) - spezialisiert auf deutsches Recht.
-
----
-
-## Das Problem
-
-Du fragst eine KI nach Mietrecht und plötzlich erklärt sie dir, warum das auch strafrechtlich relevant sein könnte - mit erfundenen Paragraphen. Classic LLM-Move.
-
-## Die Lösung: JuraCrew
-
-**7 spezialisierte Agenten**, die nur eines wirklich gut können: **Nein sagen.**
-
-```
-"Architecture by Exclusion" - Die Qualität entsteht durch das,
-was die Agenten NICHT tun dürfen.
-
-Oder wie wir sagen: "Nicht mein Rechtsgebiet, frag den Kollegen."
-```
-
-Jeder Agent hat **Hard Constraints** - unverletzbare Regeln, was er NICHT anfassen darf. Plus eine **Abgrenzungs-Tabelle** in jedem Gutachten, damit transparent ist, wer was bearbeitet hat.
+Based on the [Multi-Agent Team Blueprint](https://github.com/cubetribe/ClaudeCode_GodMode-On) - specialized for German law.
 
 ---
 
-## Die Crew
+## The Problem
 
-| Agent | Rolle | Persönlichkeit |
-|-------|-------|----------------|
-| `@researcher` | **Der Türsteher** - Stellt nervige Rückfragen | "Haben Sie das Kündigungsschreiben dabei?" |
-| `@agent-contract` | Vertragsrecht (BGB AT, Schuldrecht, AGB) | Der Pedant mit dem Rotstift |
-| `@agent-criminal` | Strafrecht (StGB, StPO) | "Interessant, aber erstmal nichts sagen." |
-| `@agent-tenancy` | Mietrecht (§§535-580a BGB) | Der Anwalt, den jeder Mieter kennt |
-| `@agent-corp` | Unternehmensrecht (HGB, GmbHG, AktG) | Trägt metaphorisch immer Anzug |
-| `@validator-legal` | **Der Kritiker** - Findet jeden Fehler | "Aber haben Sie auch an §XY gedacht?" |
-| `@scribe-legal` | **Der Übersetzer** - Macht Juristendeutsch lesbar | "Was der Kollege sagen wollte..." |
+You ask an AI about tenancy law and suddenly it's explaining why this could also be criminally relevant - with made-up statutes. Classic LLM move.
+
+## The Solution: JuraCrew
+
+**7 specialized agents** who are really good at one thing: **Saying no.**
+
+```
+"Architecture by Exclusion" - Quality emerges from what
+the agents are NOT allowed to do.
+
+Or as we say: "Not my jurisdiction, ask my colleague."
+```
+
+Each agent has **Hard Constraints** - inviolable rules about what they must NOT touch. Plus a **Demarcation Table** in every opinion, making it transparent who handled what.
 
 ---
 
-## So läuft das ab
+## The Crew
+
+| Agent | Role | Personality |
+|-------|------|-------------|
+| `@researcher` | **The Bouncer** - Asks annoying questions | "Do you have the termination letter?" |
+| `@agent-contract` | Contract Law (BGB AT, Obligations, Standard Terms) | The pedant with the red pen |
+| `@agent-criminal` | Criminal Law (StGB, StPO) | "Interesting, but better say nothing for now." |
+| `@agent-tenancy` | Tenancy Law (§§535-580a BGB) | The lawyer every tenant knows |
+| `@agent-corp` | Corporate Law (HGB, GmbHG, AktG) | Metaphorically always wears a suit |
+| `@validator-legal` | **The Critic** - Finds every mistake | "But did you consider §XY?" |
+| `@scribe-legal` | **The Translator** - Makes legalese readable | "What my colleague meant to say..." |
+
+---
+
+## How It Works
 
 ```
-[Deine Anfrage]
+[Your Request]
       │
       ▼
 ┌─────────────────┐
-│  @researcher    │ ◄── Stellt erstmal 10 Fragen
-│  (Türsteher)    │     (Ja, alle sind wichtig)
+│  @researcher    │ ◄── Asks 10 questions first
+│  (Bouncer)      │     (Yes, all are important)
 └────────┬────────┘
          │
-         ▼ "Akte vollständig, startet die Spezialisten!"
+         ▼ "File complete, let's start the specialists!"
 ┌────────────────────────────────────────┐
-│      DIE FACHLEUTE ARBEITEN PARALLEL   │
+│      SPECIALISTS WORK IN PARALLEL      │
 │  @agent-contract  @agent-criminal      │
 │  @agent-tenancy   @agent-corp          │
 │                                        │
-│  (Jeder macht nur SEIN Ding)           │
+│  (Each does ONLY their thing)          │
 └────────────────────────┬───────────────┘
                          │
-                         ▼ "Fertig! Zur Qualitätskontrolle!"
+                         ▼ "Done! Quality control!"
               ┌─────────────────────┐
-              │  @validator-legal   │ ◄── APPROVED / REVISE / "Das geht so nicht"
+              │  @validator-legal   │ ◄── APPROVED / REVISE / "This won't work"
               └──────────┬──────────┘
                          │
-                         ▼ "Alles korrekt, jetzt verständlich machen!"
+                         ▼ "All correct, now make it understandable!"
               ┌─────────────────────┐
-              │   @scribe-legal     │ ◄── Übersetzt in Mandanten-Sprache
+              │   @scribe-legal     │ ◄── Translates into client language
               └──────────┬──────────┘
                          │
                          ▼
               [FINAL_OPINION.md]
-              (Verständlich UND korrekt!)
+              (Understandable AND correct!)
 ```
 
-**Das Beste:** Läuft automatisch durch! Hooks sei Dank.
+**The Best Part:** Runs automatically! Thanks to hooks.
 
 ---
 
 ## Installation
 
-### Was du brauchst
+### What You Need
 
-- [Claude Code CLI](https://docs.anthropic.com/en/docs/claude-code) oder Claude Desktop
+- [Claude Code CLI](https://docs.anthropic.com/en/docs/claude-code) or Claude Desktop
 - Git
-- Einen Rechtsfall (optional, aber empfohlen)
+- A legal case (optional, but recommended)
 
-### Los geht's
+### Let's Go
 
 ```bash
-# Repository klonen
+# Clone repository
 git clone https://github.com/cubetribe/JuraCrew.git
 cd JuraCrew
 
-# Das war's. Ernsthaft.
-# CLAUDE.md wird automatisch geladen.
+# That's it. Seriously.
+# CLAUDE.md loads automatically.
 ```
 
-### Starten
+### Start
 
 ```bash
-# Terminal öffnen im JuraCrew-Ordner
+# Open terminal in JuraCrew folder
 claude
 
-# Oder: Claude Desktop öffnen und den Ordner auswählen
+# Or: Open Claude Desktop and select the folder
 ```
 
 ---
 
-## Schnellstart
+## Quick Start
 
-### Beispiel 1: "Mein Vermieter spinnt"
-
-```
-Du: "Mein Vermieter hat mir wegen Eigenbedarf gekündigt,
-     aber ich glaube der will die Wohnung nur teurer vermieten."
-
-@researcher (Türsteher):
-├── Wann genau kam die Kündigung?
-├── Haben Sie das Schreiben?
-├── Seit wann wohnen Sie dort?
-└── Wer soll angeblich einziehen?
-
-[Du antwortest]
-
-System: "Okay, das riecht nach Mietrecht UND evtl. Betrug..."
-
-Automatisch gestartet:
-├── @agent-tenancy → "Kündigung unwirksam weil..."
-└── @agent-criminal → "Für Betrug bräuchten wir..."
-
-@validator-legal: "Beide Gutachten checken... APPROVED!"
-
-@scribe-legal erstellt: FINAL_OPINION_CASE-2025-0001.md
-→ Verständliche Zusammenfassung mit Handlungsempfehlungen
-```
-
-### Beispiel 2: Schnelle Frage
+### Example 1: "My Landlord Is Acting Crazy"
 
 ```
-Du: "Quick Check: Kann ich wegen Schimmel die Miete mindern?"
+You: "My landlord terminated my lease for personal use,
+     but I think he just wants to rent it out for more money."
 
-→ Geht direkt an @agent-tenancy
-→ Antwort im Chat (kein großes Mandat nötig)
+@researcher (Bouncer):
+├── When exactly did you receive the termination?
+├── Do you have the letter?
+├── How long have you lived there?
+└── Who is supposedly moving in?
+
+[You answer]
+
+System: "Okay, this smells like tenancy law AND possibly fraud..."
+
+Automatically started:
+├── @agent-tenancy → "Termination invalid because..."
+└── @agent-criminal → "For fraud we'd need..."
+
+@validator-legal: "Checking both opinions... APPROVED!"
+
+@scribe-legal creates: FINAL_OPINION_CASE-2025-0001.md
+→ Understandable summary with action recommendations
+```
+
+### Example 2: Quick Question
+
+```
+You: "Quick Check: Can I reduce rent due to mold?"
+
+→ Goes directly to @agent-tenancy
+→ Answer in chat (no major mandate needed)
 ```
 
 ---
 
-## Was macht die Agenten besonders?
+## What Makes the Agents Special?
 
-### Hard Constraints ("Was ich NICHT tue")
+### Hard Constraints ("What I DO NOT Do")
 
-Jeder Agent hat **verbotene Zonen**:
+Each agent has **forbidden zones**:
 
 ```markdown
-## Was ich NICHT tue (und zwar NIEMALS)
+## What I DO NOT Do (and I mean NEVER)
 
-- ❌ Strafrecht → @agent-criminal ist zuständig
-- ❌ Mietrecht → @agent-tenancy kümmert sich
-- ❌ Unternehmensrecht → @agent-corp macht das
+- ❌ Criminal Law → @agent-criminal is responsible
+- ❌ Tenancy Law → @agent-tenancy handles this
+- ❌ Corporate Law → @agent-corp does that
 
-Ich sage lieber "Frag den Kollegen" als Unsinn zu erzählen.
+I'd rather say "Ask my colleague" than spout nonsense.
 ```
 
-### Die Abgrenzungs-Tabelle (Pflicht in jedem Gutachten!)
+### The Demarcation Table (Mandatory in Every Opinion!)
 
-| Rechtsfrage | Meine Zuständigkeit | Übergabe an | Warum |
-|-------------|--------------------:|-------------|-------|
-| Betrug bei Eigenbedarf? | ❌ Nope | @agent-criminal | Ist Strafrecht |
-| Kündigung wirksam? | ✅ Mein Job | - | Ist Mietrecht |
+| Legal Question | My Responsibility | Hand Over To | Why |
+|----------------|------------------:|--------------|-----|
+| Fraud in personal use case? | ❌ Nope | @agent-criminal | It's criminal law |
+| Termination valid? | ✅ My job | - | It's tenancy law |
 
-**Warum?** Zwingt zum Nachdenken: "Ist das wirklich mein Bereich?"
+**Why?** Forces reflection: "Is this really my area?"
 
 ---
 
-## Dateistruktur
+## File Structure
 
 ```
 JuraCrew/
-├── CLAUDE.md           ← Das Hirn (lädt automatisch!)
-├── README.md           ← Du bist hier
+├── CLAUDE.md           ← The Brain (loads automatically!)
+├── README.md           ← You are here
 │
-├── agents/             ← Die Crew-Definitionen
-│   ├── researcher.md   ← Der Türsteher
+├── agents/             ← The Crew Definitions
+│   ├── researcher.md   ← The Bouncer
 │   ├── agent-contract.md
 │   ├── agent-criminal.md
 │   ├── agent-tenancy.md
 │   ├── agent-corp.md
-│   ├── validator-legal.md  ← Der Kritiker
-│   └── scribe-legal.md     ← Der Übersetzer
+│   ├── validator-legal.md  ← The Critic
+│   └── scribe-legal.md     ← The Translator
 │
-├── templates/          ← Vorlagen für Outputs
+├── templates/          ← Output Templates
 │   ├── MANDATE_REGISTRY.md
 │   ├── CASE_TEMPLATE.md
 │   └── OPINION_TEMPLATE.md
 │
-├── mandates/           ← Hier landen deine Fälle (gitignored!)
+├── mandates/           ← Your cases land here (gitignored!)
 │   └── CASE-2025-0001/
 │       ├── FACTS_*.md
 │       ├── OPINION_*.md
 │       └── FINAL_OPINION_*.md
 │
 └── config/
-    └── settings.json   ← Hooks & Model-Zuweisungen
+    └── settings.json   ← Hooks & Model Assignments
 ```
 
 ---
 
-## Befehle
+## Commands
 
-| Sag einfach... | Was passiert |
-|----------------|--------------|
-| `Neues Mandat: [Sachverhalt]` | @researcher startet die Befragung |
-| `Quick Check: [Frage]` | Direktantwort ohne großes Theater |
-| `Status CASE-2025-0001` | Wo steht der Fall gerade? |
-| `Gutachten CASE-2025-0001` | Zeig mir das Ergebnis |
+| Just Say... | What Happens |
+|-------------|--------------|
+| `New Mandate: [facts]` | @researcher starts questioning |
+| `Quick Check: [question]` | Direct answer without ceremony |
+| `Status CASE-2025-0001` | Where does the case stand? |
+| `Opinion CASE-2025-0001` | Show me the result |
 
 ---
 
-## Eigene Agenten hinzufügen?
+## Add Your Own Agents?
 
-1. Neue Datei: `agents/agent-family.md` (Familienrecht, anyone?)
-2. Von bestehendem Agenten kopieren
-3. **Hard Constraints definieren** (Das Wichtigste!)
-4. In `CLAUDE.md` eintragen
-5. Model in `config/settings.json` zuweisen
+1. New file: `agents/agent-family.md` (Family law, anyone?)
+2. Copy from existing agent
+3. **Define Hard Constraints** (Most important!)
+4. Register in `CLAUDE.md`
+5. Assign model in `config/settings.json`
 
 ---
 
 ## FAQ
 
-### Kann ich damit echte Rechtsberatung machen?
+### Can I use this for actual legal advice?
 
-**Nein.** JuraCrew ist ein Analyse-Tool, keine Rechtsanwaltskanzlei. Alle Gutachten sind unverbindlich. Für echte Rechtsberatung: Echten Anwalt fragen.
+**No.** JuraCrew is an analysis tool, not a law firm. All opinions are non-binding. For real legal advice: Ask a real lawyer.
 
-### Warum 7 Agenten statt einer Super-KI?
+### Why 7 agents instead of one super AI?
 
-- **Spezialisierung** > Generalisierung
-- **Hard Constraints** verhindern Halluzinationen
-- **Parallele Arbeit** bei komplexen Fällen
-- **Quality Gate** fängt Fehler ab
+- **Specialization** > Generalization
+- **Hard Constraints** prevent hallucinations
+- **Parallel work** on complex cases
+- **Quality Gate** catches errors
 
-Oder kurz: Weil ein Alleskönner meist ein Nichtskönner ist.
+Or simply: Because a jack-of-all-trades is usually a master of none.
 
-### Brauche ich MCP-Server?
+### Do I need MCP servers?
 
-**Nein.** JuraCrew läuft mit Standard-Tools (Read, Grep, Glob, Write). Keine externen Server nötig. Plug & Play.
+**No.** JuraCrew runs with standard tools (Read, Grep, Glob, Write). No external servers needed. Plug & Play.
 
 ---
 
 ## Disclaimer
 
-**JuraCrew ersetzt KEINE professionelle Rechtsberatung!**
+**JuraCrew does NOT replace professional legal advice!**
 
-- Alle Gutachten sind unverbindlich
-- Ohne Gewähr
-- Nicht als Rechtsrat zu verstehen
+- All opinions are non-binding
+- Without warranty
+- Not to be understood as legal counsel
 
-**Bei echten Rechtsproblemen: Echten Anwalt konsultieren!**
+**For real legal issues: Consult a real lawyer!**
 
-*(Die KI-Anwälte können nicht vor Gericht erscheinen. Noch nicht.)*
-
----
-
-## Lizenz
-
-MIT License - siehe [LICENSE](LICENSE)
+*(The AI lawyers can't appear in court. Not yet.)*
 
 ---
 
-## Kontakt
+## License
 
-**Erstellt von:** Dennis Westermann
-**E-Mail:** d.westermann@ol-mg.de
+MIT License - see [LICENSE](LICENSE)
+
+---
+
+## Contact
+
+**Created by:** Dennis Westermann
+**Email:** d.westermann@ol-mg.de
 **Version:** 1.0
-**Datum:** 2025-12-28
+**Date:** 2025-12-28
 
 ---
 
-*JuraCrew - 7 KI-Anwälte, die sich gegenseitig kontrollieren. Weil Vertrauen gut ist, aber Kontrolle besser.*
+*JuraCrew - 7 AI lawyers keeping each other in check. Because trust is good, but control is better.*

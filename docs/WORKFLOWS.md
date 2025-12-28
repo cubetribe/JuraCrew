@@ -1,465 +1,465 @@
 # Legal-GodMode Workflows
 
-Diese Datei beschreibt die Standard-Workflows für verschiedene juristische Aufgaben.
+This file describes the standard workflows for various legal tasks.
 
 ---
 
-## Workflow-Übersicht
+## Workflow Overview
 
-| Workflow | Agent-Kette | Dauer | Komplexität |
+| Workflow | Agent Chain | Duration | Complexity |
 |----------|-------------|-------|-------------|
-| **Neues Zivilmandat** | @recherche → @anwalt-zivilrecht → @formular → @mandatsmanager | 15-30 Min | Hoch |
-| **Neues Strafmandat** | @recherche → @anwalt-strafrecht → @formular → @mandatsmanager | 15-30 Min | Hoch |
-| **Neues Verwaltungsmandat** | @recherche → @anwalt-verwaltung → @formular → @mandatsmanager | 15-30 Min | Hoch |
-| **Quick Check** | @anwalt-[rechtsgebiet] → @mandatsmanager | 5-10 Min | Niedrig |
-| **Gutachten** | @recherche → @gutachter → @formular | 20-45 Min | Sehr Hoch |
-| **Schriftsatz** | @anwalt-[rechtsgebiet] → @formular → @mandatsmanager | 10-20 Min | Mittel |
-| **Reine Recherche** | @recherche | 5-15 Min | Niedrig |
-| **Fristenkontrolle** | @mandatsmanager | 2-5 Min | Niedrig |
+| **New Civil Mandate** | @recherche → @anwalt-zivilrecht → @formular → @mandatsmanager | 15-30 Min | High |
+| **New Criminal Mandate** | @recherche → @anwalt-strafrecht → @formular → @mandatsmanager | 15-30 Min | High |
+| **New Administrative Mandate** | @recherche → @anwalt-verwaltung → @formular → @mandatsmanager | 15-30 Min | High |
+| **Quick Check** | @anwalt-[legal area] → @mandatsmanager | 5-10 Min | Low |
+| **Opinion** | @recherche → @gutachter → @formular | 20-45 Min | Very High |
+| **Pleading** | @anwalt-[legal area] → @formular → @mandatsmanager | 10-20 Min | Medium |
+| **Research Only** | @recherche | 5-15 Min | Low |
+| **Deadline Control** | @mandatsmanager | 2-5 Min | Low |
 
 ---
 
-## 1. Neues Zivilmandat
+## 1. New Civil Mandate
 
-### Beschreibung
-Vollständige Bearbeitung eines neuen zivilrechtlichen Mandats von der Recherche bis zum fertigen Schriftsatz.
+### Description
+Complete processing of a new civil law mandate from research to finished pleading.
 
-### Agent-Kette
+### Agent Chain
 ```
 @recherche → @anwalt-zivilrecht → @formular → @mandatsmanager
 ```
 
-### Schritt-für-Schritt
+### Step-by-Step
 
-#### 1. User-Input
+#### 1. User Input
 ```
-"Neues Mandat: Zivilrecht - Kaufpreiszahlung § 433 BGB"
+"New mandate: Civil law - Purchase price payment § 433 BGB"
 ```
 
 #### 2. @recherche (Sonnet 4.5)
-**Aufgabe**: Rechtsprechung zu § 433 BGB recherchieren
+**Task**: Research case law on § 433 BGB
 
 **Input**:
 ```
-@recherche "§ 433 BGB Kaufpreiszahlung Rechtsprechung 2024"
+@recherche "§ 433 BGB purchase price payment case law 2024"
 ```
 
-**Output**: `Agents/recherche-2025-XXX-433bgb-[datum].md`
-- Mindestens 3 BGH-Urteile
-- Kommentarmeinungen
-- Aktuelle Rechtsentwicklungen
+**Output**: `Agents/recherche-2025-XXX-433bgb-[date].md`
+- At least 3 BGH decisions
+- Commentary opinions
+- Current legal developments
 
 #### 3. @anwalt-zivilrecht (Opus 4.5)
-**Aufgabe**: Mandatsanalyse und Fallprüfung
+**Task**: Mandate analysis and case review
 
 **Input**:
 ```
-@anwalt-zivilrecht "Mandat 2025-XXX: Kaufpreiszahlung
-Sachverhalt: [Anonymisierter Sachverhalt]
-Recherche: [Link zu Recherche-Report]"
+@anwalt-zivilrecht "Mandate 2025-XXX: Purchase price payment
+Facts: [Anonymized facts]
+Research: [Link to research report]"
 ```
 
-**Output**: `Agents/anwalt-zivilrecht-2025-XXX-[datum].md`
-- Anspruchsgrundlagen (§§ 433, 434 BGB)
-- Tatbestandsprüfung
-- Erfolgsaussichten
-- Prozessstrategie
+**Output**: `Agents/anwalt-zivilrecht-2025-XXX-[date].md`
+- Legal bases (§§ 433, 434 BGB)
+- Review of elements
+- Prospects of success
+- Litigation strategy
 
 #### 4. @formular (Sonnet 4.5)
-**Aufgabe**: Klage-Schriftsatz erstellen
+**Task**: Create complaint pleading
 
 **Input**:
 ```
-@formular "Klage - Zahlungsanspruch aus Kaufvertrag
-Mandat: 2025-XXX
-Basis: [Link zu Mandatsanalyse]"
+@formular "Complaint - Payment claim from sales contract
+Mandate: 2025-XXX
+Basis: [Link to mandate analysis]"
 ```
 
-**Output**: `mandates/2025-XXX-kaufpreiszahlung/klage-entwurf.md`
-- Formell korrekter Schriftsatz
-- Vollständige Subsumtion
-- Antragsformulierung
+**Output**: `mandates/2025-XXX-purchase-price/complaint-draft.md`
+- Formally correct pleading
+- Complete subsumption
+- Motion formulation
 
 #### 5. @mandatsmanager (Sonnet 4.5)
-**Aufgabe**: Fristen berechnen und Aktenstruktur erstellen
+**Task**: Calculate deadlines and create file structure
 
 **Input**:
 ```
-@mandatsmanager "Fristen setzen für Mandat 2025-XXX
-Zustellung: [Datum]
-Rechtsgebiet: Zivilrecht (ZPO)"
+@mandatsmanager "Set deadlines for mandate 2025-XXX
+Service: [Date]
+Legal area: Civil law (ZPO)"
 ```
 
-**Output**: `Agents/mandatsmanager-2025-XXX-[datum].md`
-- Fristenübersicht (§§ 276, 283 ZPO)
-- Wiedervorlagen
-- Aktenstruktur
+**Output**: `Agents/mandatsmanager-2025-XXX-[date].md`
+- Deadline overview (§§ 276, 283 ZPO)
+- Reminders
+- File structure
 
-### Finale Aktenstruktur
+### Final File Structure
 ```
-mandates/2025-XXX-kaufpreiszahlung/
-├── mandat.md                        # Mandatsübersicht
-├── recherche-433-bgb.md             # Recherche-Report
-├── analyse-zivilrecht.md            # Mandatsanalyse
-├── klage-entwurf.md                 # Schriftsatz
-└── fristen.md                       # Fristenkontrolle
+mandates/2025-XXX-purchase-price/
+├── mandate.md                        # Mandate overview
+├── research-433-bgb.md              # Research report
+├── analysis-civil-law.md            # Mandate analysis
+├── complaint-draft.md               # Pleading
+└── deadlines.md                     # Deadline control
 ```
 
 ---
 
 ## 2. Quick Check
 
-### Beschreibung
-Schnelle erste Einschätzung ohne tiefe Recherche (für Beratungsgespräche).
+### Description
+Quick initial assessment without deep research (for consultation meetings).
 
-### Agent-Kette
+### Agent Chain
 ```
-@anwalt-[rechtsgebiet] → @mandatsmanager
+@anwalt-[legal area] → @mandatsmanager
 ```
 
-### Schritt-für-Schritt
+### Step-by-Step
 
-#### 1. User-Input
+#### 1. User Input
 ```
-"Quick Check: Strafrecht - Betrug § 263 StGB"
+"Quick Check: Criminal law - Fraud § 263 StGB"
 ```
 
 #### 2. @anwalt-strafrecht (Opus 4.5)
-**Aufgabe**: Erste Einschätzung
+**Task**: Initial assessment
 
 **Input**:
 ```
-@anwalt-strafrecht "Quick Check: Betrug § 263 StGB
-Sachverhalt: [Kurz-Sachverhalt]"
+@anwalt-strafrecht "Quick Check: Fraud § 263 StGB
+Facts: [Brief facts]"
 ```
 
-**Output**: `Agents/anwalt-strafrecht-quickcheck-[datum].md`
-- Strafbarkeit (ohne tiefe Subsumtion)
-- Erfolgsaussichten (grobe Einschätzung)
-- Handlungsempfehlung
+**Output**: `Agents/anwalt-strafrecht-quickcheck-[date].md`
+- Criminal liability (without deep subsumption)
+- Prospects of success (rough estimate)
+- Recommendation for action
 
 #### 3. @mandatsmanager (Sonnet 4.5)
-**Aufgabe**: Fristnotiz erstellen
+**Task**: Create deadline note
 
 **Input**:
 ```
-@mandatsmanager "Fristnotiz für Quick Check Strafrecht
-Datum: [Heute]
-Hinweis: Akteneinsicht beantragen"
+@mandatsmanager "Deadline note for Quick Check Criminal law
+Date: [Today]
+Note: Request file inspection"
 ```
 
-**Output**: `Agents/mandatsmanager-quickcheck-[datum].md`
-- Erinnerung: Akteneinsicht
-- Wiedervorlage: Mandatsentscheidung
+**Output**: `Agents/mandatsmanager-quickcheck-[date].md`
+- Reminder: File inspection
+- Follow-up: Mandate decision
 
-### Dauer
-5-10 Minuten
+### Duration
+5-10 minutes
 
 ---
 
-## 3. Gutachten-Erstellung
+## 3. Opinion Creation
 
-### Beschreibung
-Ausführliches Rechtsgutachten mit tiefer Subsumtion und Meinungsstreit.
+### Description
+Detailed legal opinion with deep subsumption and dispute of opinion.
 
-### Agent-Kette
+### Agent Chain
 ```
 @recherche → @gutachter → @formular
 ```
 
-### Schritt-für-Schritt
+### Step-by-Step
 
-#### 1. User-Input
+#### 1. User Input
 ```
-"Gutachten: Verkehrsunfall § 823 BGB - Anscheinsbeweis"
+"Opinion: Traffic accident § 823 BGB - Apparent evidence"
 ```
 
 #### 2. @recherche (Sonnet 4.5)
-**Aufgabe**: Umfassende Recherche
+**Task**: Comprehensive research
 
 **Input**:
 ```
-@recherche "§ 823 BGB Verkehrsunfall Anscheinsbeweis Rechtsprechung"
+@recherche "§ 823 BGB traffic accident apparent evidence case law"
 ```
 
-**Output**: `Agents/recherche-823bgb-anscheinsbeweis-[datum].md`
-- BGH-Rechtsprechung (mindestens 5 Urteile)
-- Kommentarmeinungen (h.M. vs. a.A.)
-- Literatur
+**Output**: `Agents/recherche-823bgb-apparent-evidence-[date].md`
+- BGH case law (at least 5 decisions)
+- Commentary opinions (prevailing view vs. opposing view)
+- Literature
 
 #### 3. @gutachter (Opus 4.5)
-**Aufgabe**: Tiefe Subsumtion
+**Task**: Deep subsumption
 
 **Input**:
 ```
-@gutachter "Rechtsgutachten: § 823 BGB Verkehrsunfall
-Fragestellung: Anscheinsbeweis bei Auffahrunfall?
-Recherche: [Link zu Recherche-Report]
-Sachverhalt: [Anonymisierter Sachverhalt]"
+@gutachter "Legal opinion: § 823 BGB traffic accident
+Question: Apparent evidence in rear-end collision?
+Research: [Link to research report]
+Facts: [Anonymized facts]"
 ```
 
-**Output**: `Agents/gutachter-823bgb-anscheinsbeweis-[datum].md`
-- Vollständige Subsumtion (Tatbestand → Rechtsfolge)
-- Meinungsstreit (h.M. vs. a.A.)
-- Stellungnahme mit Begründung
-- Ergebnis
+**Output**: `Agents/gutachter-823bgb-apparent-evidence-[date].md`
+- Complete subsumption (Elements → Legal consequence)
+- Dispute of opinion (prevailing view vs. opposing view)
+- Statement with justification
+- Result
 
 #### 4. @formular (Sonnet 4.5)
-**Aufgabe**: Gutachten formatieren
+**Task**: Format opinion
 
 **Input**:
 ```
-@formular "Rechtsgutachten formatieren
-Basis: [Link zu Gutachter-Report]
-Format: Formelles Gutachten mit Deckblatt"
+@formular "Format legal opinion
+Basis: [Link to expert report]
+Format: Formal opinion with cover page"
 ```
 
-**Output**: `docs/gutachten-823bgb-anscheinsbeweis-final.md`
-- Deckblatt
-- Inhaltsverzeichnis
-- Formatiertes Gutachten
-- Fundstellenverzeichnis
+**Output**: `docs/opinion-823bgb-apparent-evidence-final.md`
+- Cover page
+- Table of contents
+- Formatted opinion
+- Index of references
 
-### Dauer
-20-45 Minuten
+### Duration
+20-45 minutes
 
 ---
 
-## 4. Schriftsatz-Erstellung
+## 4. Pleading Creation
 
-### Beschreibung
-Erstellung eines Schriftsatzes (Klage, Klageerwiderung, Widerspruch, etc.).
+### Description
+Creation of a pleading (complaint, response to complaint, opposition, etc.).
 
-### Agent-Kette
+### Agent Chain
 ```
-@anwalt-[rechtsgebiet] → @formular → @mandatsmanager
-```
-
-### Schritt-für-Schritt
-
-#### 1. User-Input
-```
-"Schriftsatz: Klageerwiderung - Mandat 2025-XXX"
+@anwalt-[legal area] → @formular → @mandatsmanager
 ```
 
-#### 2. @anwalt-[rechtsgebiet] (Opus 4.5)
-**Aufgabe**: Strategie entwickeln
+### Step-by-Step
+
+#### 1. User Input
+```
+"Pleading: Response to complaint - Mandate 2025-XXX"
+```
+
+#### 2. @anwalt-[legal area] (Opus 4.5)
+**Task**: Develop strategy
 
 **Input**:
 ```
-@anwalt-zivilrecht "Klageerwiderung für Mandat 2025-XXX
-Gegnerische Klage: [Zusammenfassung]
-Unsere Position: [Sachverhalt]"
+@anwalt-zivilrecht "Response to complaint for mandate 2025-XXX
+Opposing complaint: [Summary]
+Our position: [Facts]"
 ```
 
-**Output**: `Agents/anwalt-zivilrecht-klageerwiderung-[datum].md`
-- Verteidigungsstrategie
-- Angriffs- und Verteidigungsmittel
-- Rechtliche Argumente
+**Output**: `Agents/anwalt-zivilrecht-response-[date].md`
+- Defense strategy
+- Offensive and defensive measures
+- Legal arguments
 
 #### 3. @formular (Sonnet 4.5)
-**Aufgabe**: Schriftsatz formulieren
+**Task**: Formulate pleading
 
 **Input**:
 ```
-@formular "Klageerwiderung - Zahlungsanspruch
-Basis: [Link zu Strategie]
-Gericht: LG München
-Az.: 12 O 123/25"
+@formular "Response to complaint - Payment claim
+Basis: [Link to strategy]
+Court: District Court Munich
+Case No.: 12 O 123/25"
 ```
 
-**Output**: `mandates/2025-XXX/klageerwiderung-entwurf.md`
-- Formell korrekter Schriftsatz
-- Vollständige Begründung
-- Antragsformulierung
+**Output**: `mandates/2025-XXX/response-draft.md`
+- Formally correct pleading
+- Complete justification
+- Motion formulation
 
 #### 4. @mandatsmanager (Sonnet 4.5)
-**Aufgabe**: Fristen aktualisieren
+**Task**: Update deadlines
 
 **Input**:
 ```
-@mandatsmanager "Frist: Klageerwiderung eingereicht am [Datum]
-Nächste Frist: Replik (ca. 2 Wochen nach Erwiderung)"
+@mandatsmanager "Deadline: Response to complaint filed on [Date]
+Next deadline: Reply (approx. 2 weeks after response)"
 ```
 
-**Output**: Update in `Agents/mandatsmanager-2025-XXX-[datum].md`
+**Output**: Update in `Agents/mandatsmanager-2025-XXX-[date].md`
 
-### Dauer
-10-20 Minuten
+### Duration
+10-20 minutes
 
 ---
 
-## 5. Reine Recherche
+## 5. Research Only
 
-### Beschreibung
-Gesetz/Rechtsprechung/Literatur recherchieren ohne Mandatsbezug.
+### Description
+Research statutes/case law/literature without mandate reference.
 
-### Agent-Kette
+### Agent Chain
 ```
 @recherche
 ```
 
-### Schritt-für-Schritt
+### Step-by-Step
 
-#### 1. User-Input
+#### 1. User Input
 ```
-"Recherche: § 263 StGB Täuschungshandlung konkludent"
+"Research: § 263 StGB deceptive act implied"
 ```
 
 #### 2. @recherche (Sonnet 4.5)
-**Aufgabe**: Fundstellen finden
+**Task**: Find references
 
 **Input**:
 ```
-@recherche "§ 263 StGB Täuschungshandlung konkludent Rechtsprechung Literatur"
+@recherche "§ 263 StGB deceptive act implied case law literature"
 ```
 
-**Output**: `Agents/recherche-263stgb-tauschung-[datum].md`
-- Gesetzestext
-- BGH/BVerfG Rechtsprechung
-- Kommentarmeinungen
-- Zusammenfassung (h.M. vs. a.A.)
+**Output**: `Agents/recherche-263stgb-deception-[date].md`
+- Text of statute
+- BGH/BVerfG case law
+- Commentary opinions
+- Summary (prevailing view vs. opposing view)
 
-### Dauer
-5-15 Minuten
+### Duration
+5-15 minutes
 
 ---
 
-## 6. Fristenkontrolle
+## 6. Deadline Control
 
-### Beschreibung
-Fristen berechnen und Wiedervorlagen setzen.
+### Description
+Calculate deadlines and set reminders.
 
-### Agent-Kette
+### Agent Chain
 ```
 @mandatsmanager
 ```
 
-### Schritt-für-Schritt
+### Step-by-Step
 
-#### 1. User-Input
+#### 1. User Input
 ```
-"Fristen für Mandat 2025-XXX
-Zustellung Klage: 2025-01-15"
+"Deadlines for mandate 2025-XXX
+Service of complaint: 2025-01-15"
 ```
 
 #### 2. @mandatsmanager (Sonnet 4.5)
-**Aufgabe**: Fristen berechnen
+**Task**: Calculate deadlines
 
 **Input**:
 ```
-@mandatsmanager "Fristenberechnung Mandat 2025-XXX
-Rechtsgebiet: Zivilrecht (ZPO)
-Zustellung: 2025-01-15"
+@mandatsmanager "Deadline calculation mandate 2025-XXX
+Legal area: Civil law (ZPO)
+Service: 2025-01-15"
 ```
 
-**Output**: `Agents/mandatsmanager-2025-XXX-fristen-[datum].md`
-- Klageerwiderung: 2025-01-29 (§ 276 ZPO: 2 Wochen)
-- Replik: ca. 2 Wochen nach Erwiderung
-- Hauptverhandlung: wird noch bestimmt
+**Output**: `Agents/mandatsmanager-2025-XXX-deadlines-[date].md`
+- Response to complaint: 2025-01-29 (§ 276 ZPO: 2 weeks)
+- Reply: approx. 2 weeks after response
+- Main trial: to be determined
 
-### Dauer
-2-5 Minuten
+### Duration
+2-5 minutes
 
 ---
 
-## Workflow-Auswahl Tabelle
+## Workflow Selection Table
 
-| Situation | Empfohlener Workflow | Begründung |
+| Situation | Recommended Workflow | Justification |
 |-----------|---------------------|------------|
-| **Mandant ruft an, unsicher ob Fall übernehmen** | Quick Check | Schnelle Einschätzung ohne Zeitaufwand |
-| **Neuer Fall, Mandatsvertrag unterschrieben** | Neues [Rechtsgebiet]-Mandat | Vollständige Bearbeitung von Anfang an |
-| **Komplexe Rechtsfrage, unsicher** | Gutachten | Tiefe Analyse mit Meinungsstreit |
-| **Gegner hat geklagt, Frist läuft** | Schriftsatz-Erstellung | Fokus auf Erwiderung |
-| **Unklare Rechtslage zu § XYZ** | Reine Recherche | Fundstellen sammeln |
-| **Brief vom Gericht, Frist unklar** | Fristenkontrolle | Fristversäumnis vermeiden |
+| **Client calls, uncertain whether to take case** | Quick Check | Quick assessment without time investment |
+| **New case, mandate agreement signed** | New [Legal area] Mandate | Complete processing from the start |
+| **Complex legal question, uncertain** | Opinion | Deep analysis with dispute of opinion |
+| **Opponent has filed complaint, deadline running** | Pleading Creation | Focus on response |
+| **Unclear legal situation on § XYZ** | Research Only | Gather references |
+| **Letter from court, deadline unclear** | Deadline Control | Avoid missing deadlines |
 
 ---
 
 ## Best Practices
 
-### 1. Immer Recherche VOR Fachagent (außer Quick Check)
+### 1. Always research BEFORE specialist agent (except Quick Check)
 ```
-✅ RICHTIG: @recherche → @anwalt-zivilrecht
-❌ FALSCH: @anwalt-zivilrecht (ohne Recherche bei komplexen Fragen)
-```
-
-**Begründung**: Fachagenten benötigen aktuelle Rechtsprechung für fundierte Analyse.
-
-### 2. Immer Mandatsmanager AM ENDE
-```
-✅ RICHTIG: @formular → @mandatsmanager
-❌ FALSCH: @formular (Fristen vergessen!)
+✅ CORRECT: @recherche → @anwalt-zivilrecht
+❌ WRONG: @anwalt-zivilrecht (without research for complex questions)
 ```
 
-**Begründung**: Fristversäumnis ist berufshaftungsrelevant.
+**Justification**: Specialist agents need current case law for well-founded analysis.
 
-### 3. Gutachter NUR für tiefe Analyse
+### 2. Always mandate manager AT THE END
 ```
-✅ RICHTIG: @gutachter (bei komplexem Meinungsstreit)
-❌ FALSCH: @gutachter (für einfache Fälle → zu teuer/langsam)
-```
-
-**Begründung**: Opus 4.5 ist token-intensiv, nur bei Bedarf nutzen.
-
-### 4. Formular für FINALE Dokumente
-```
-✅ RICHTIG: @anwalt-zivilrecht → @formular
-❌ FALSCH: @anwalt-zivilrecht (Entwurf direkt nutzen)
+✅ CORRECT: @formular → @mandatsmanager
+❌ WRONG: @formular (deadlines forgotten!)
 ```
 
-**Begründung**: Formular garantiert formelle Korrektheit.
+**Justification**: Missing deadlines is professionally liable.
+
+### 3. Expert ONLY for deep analysis
+```
+✅ CORRECT: @gutachter (for complex dispute of opinion)
+❌ WRONG: @gutachter (for simple cases → too expensive/slow)
+```
+
+**Justification**: Opus 4.5 is token-intensive, only use when needed.
+
+### 4. Template for FINAL documents
+```
+✅ CORRECT: @anwalt-zivilrecht → @formular
+❌ WRONG: @anwalt-zivilrecht (use draft directly)
+```
+
+**Justification**: Template guarantees formal correctness.
 
 ---
 
-## Fehlerbehandlung
+## Error Handling
 
-### Problem: Keine Fundstellen gefunden
+### Problem: No references found
 ```
-Lösung: @recherche mit spezifischerer Norm/Frage erneut aufrufen
-Eskalation: Mindestens 3 Fundstellen sind PFLICHT
-```
-
-### Problem: Subsumtion unvollständig
-```
-Lösung: @gutachter einschalten für tiefe Analyse
-Eskalation: Tatbestand → Rechtsfolge muss vollständig sein
+Solution: Call @recherche again with more specific norm/question
+Escalation: At least 3 references are MANDATORY
 ```
 
-### Problem: Frist unklar
+### Problem: Subsumption incomplete
 ```
-Lösung: @mandatsmanager mit Zustelldatum aufrufen
-Eskalation: Bei Unsicherheit immer kürzeste Frist annehmen
+Solution: Engage @gutachter for deep analysis
+Escalation: Elements → Legal consequence must be complete
 ```
 
-### Problem: Template fehlt
+### Problem: Deadline unclear
 ```
-Lösung: @formular mit Beispiel-Vorgabe aufrufen
-Eskalation: In templates/ ablegen für zukünftige Nutzung
+Solution: Call @mandatsmanager with service date
+Escalation: When in doubt, always assume shortest deadline
+```
+
+### Problem: Template missing
+```
+Solution: Call @formular with example specification
+Escalation: Store in templates/ for future use
 ```
 
 ---
 
-## Token-Optimierung
+## Token Optimization
 
-### Workflow-Optimierung nach Token-Verbrauch
+### Workflow Optimization by Token Consumption
 
-| Workflow | Token-Verbrauch | Optimierung |
+| Workflow | Token Consumption | Optimization |
 |----------|----------------|-------------|
-| Neues Mandat | Hoch (Opus) | Recherche-Report in Datei, nicht in Chat |
-| Quick Check | Mittel (Opus) | Kurz-Output anfordern |
-| Gutachten | Sehr Hoch (Opus) | `/compact` nach Abschluss |
-| Schriftsatz | Mittel | Template wiederverwenden |
-| Recherche | Niedrig (Sonnet) | OK für mehrfache Nutzung |
-| Fristen | Niedrig (Sonnet) | OK für mehrfache Nutzung |
+| New Mandate | High (Opus) | Research report in file, not in chat |
+| Quick Check | Medium (Opus) | Request brief output |
+| Opinion | Very High (Opus) | `/compact` after completion |
+| Pleading | Medium | Reuse template |
+| Research | Low (Sonnet) | OK for multiple uses |
+| Deadlines | Low (Sonnet) | OK for multiple uses |
 
-### Session-Hygiene
+### Session Hygiene
 
-- **Nach jedem abgeschlossenen Mandat**: `/clear`
-- **Bei langen Multi-Mandat-Sessions**: `/compact` bei 70% Token-Usage
-- **Große Agent-Reports**: IMMER in Dateien schreiben, nicht in Chat ausgeben
+- **After each completed mandate**: `/clear`
+- **For long multi-mandate sessions**: `/compact` at 70% token usage
+- **Large agent reports**: ALWAYS write to files, not output in chat
 
 ---
 
-*Diese Dokumentation beschreibt alle Standard-Workflows von Legal-GodMode.*
-*Letzte Aktualisierung: 2025-12-28*
+*This documentation describes all standard workflows of Legal-GodMode.*
+*Last Updated: 2025-12-28*

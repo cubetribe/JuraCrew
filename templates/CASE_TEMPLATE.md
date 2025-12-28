@@ -1,242 +1,242 @@
-# Mandats-Akte: [CASE-YYYY-NNNN]
+# Mandate File: [CASE-YYYY-NNNN]
 
 **Status:** [INTAKE/REVIEW/ASSIGNED/EXPERT_WIP/VALIDATION/COMPLETED]
-**Priorität:** [🔴 URGENT / 🟠 HIGH / 🟡 MEDIUM / 🟢 LOW]
-**Erstellt:** [YYYY-MM-DD]
-**Letzte Aktualisierung:** [YYYY-MM-DD]
+**Priority:** [🔴 URGENT / 🟠 HIGH / 🟡 MEDIUM / 🟢 LOW]
+**Created:** [YYYY-MM-DD]
+**Last Updated:** [YYYY-MM-DD]
 
 ---
 
-## 1. MANDANTEN-INFORMATIONEN
+## 1. CLIENT INFORMATION
 
-### Mandant
-- **Name/Firma:** [Name]
-- **Kontakt:** [E-Mail/Telefon]
-- **Adresse:** [Anschrift]
-- **Vertreter:** [Falls juristische Person]
+### Client
+- **Name/Company:** [Name]
+- **Contact:** [Email/Phone]
+- **Address:** [Address]
+- **Representative:** [If legal entity]
 
-### Gegenseite
-- **Name/Firma:** [Name]
-- **Kontakt:** [Falls bekannt]
-- **Anwaltliche Vertretung:** [Falls vorhanden]
+### Opposing Party
+- **Name/Company:** [Name]
+- **Contact:** [If known]
+- **Legal Representation:** [If present]
 
-### Weitere Beteiligte
-| Name | Rolle | Kontakt | Relevanz |
+### Other Parties
+| Name | Role | Contact | Relevance |
 |------|-------|---------|----------|
 | - | - | - | - |
 
 ---
 
-## 2. SACHVERHALT
+## 2. FACTS
 
-### Kurzfassung
-[1-3 Sätze: Worum geht es im Kern?]
+### Summary
+[1-3 sentences: What is the core issue?]
 
-### Detaillierter Sachverhalt
+### Detailed Facts
 
-#### Chronologie
-| Datum | Ereignis | Beweismittel |
+#### Chronology
+| Date | Event | Evidence |
 |-------|----------|--------------|
-| [YYYY-MM-DD] | [Was ist passiert?] | [Dokument/Zeuge] |
-| [YYYY-MM-DD] | [Was ist passiert?] | [Dokument/Zeuge] |
+| [YYYY-MM-DD] | [What happened?] | [Document/Witness] |
+| [YYYY-MM-DD] | [What happened?] | [Document/Witness] |
 
-#### Fakten-Kategorien
+#### Fact Categories
 
-**Vertragsbeziehungen:**
-- [Vertrag 1: Art, Abschlussdatum, Parteien, wesentliche Inhalte]
-- [Vertrag 2: ...]
+**Contractual Relationships:**
+- [Contract 1: Type, Date of conclusion, Parties, essential contents]
+- [Contract 2: ...]
 
-**Kommunikation:**
-- [E-Mail vom XX.XX.XXXX: Zusammenfassung]
-- [Schreiben vom XX.XX.XXXX: Zusammenfassung]
+**Communication:**
+- [Email from XX.XX.XXXX: Summary]
+- [Letter from XX.XX.XXXX: Summary]
 
-**Finanzielle Aspekte:**
-- Streitwert: [Betrag in EUR]
-- Bereits geleistete Zahlungen: [Betrag]
-- Geforderte Summe: [Betrag]
+**Financial Aspects:**
+- Amount in dispute: [Amount in EUR]
+- Payments already made: [Amount]
+- Claimed sum: [Amount]
 
-**Fristen:**
-- [Frist 1: Beschreibung, Datum, Konsequenz bei Versäumnis]
-- [Frist 2: ...]
+**Deadlines:**
+- [Deadline 1: Description, Date, Consequence if missed]
+- [Deadline 2: ...]
 
 ---
 
-## 3. BEWEISMITTEL
+## 3. EVIDENCE
 
-### Dokumente
-| Nr. | Dokumentenart | Datum | Fundstelle | Relevanz |
+### Documents
+| No. | Document Type | Date | Location | Relevance |
 |-----|---------------|-------|------------|----------|
-| D-001 | [Vertrag/E-Mail/Rechnung] | [YYYY-MM-DD] | [Dateiname] | [Wofür relevant?] |
+| D-001 | [Contract/Email/Invoice] | [YYYY-MM-DD] | [Filename] | [Relevant for what?] |
 | D-002 | [...] | [...] | [...] | [...] |
 
-### Zeugen
-| Name | Beziehung zum Fall | Kontakt | Zu bestätigende Fakten |
+### Witnesses
+| Name | Relationship to Case | Contact | Facts to Confirm |
 |------|-------------------|---------|------------------------|
 | - | - | - | - |
 
-### Sonstige Beweismittel
-- [Fotos, Videos, Screenshots, etc.]
+### Other Evidence
+- [Photos, Videos, Screenshots, etc.]
 
 ---
 
-## 4. RECHTLICHE BEWERTUNG
+## 4. LEGAL ASSESSMENT
 
-### Identifizierte Rechtsfragen
-| Nr. | Rechtsfrage | Rechtsgebiet | Priorität | Zuständiger Agent |
+### Identified Legal Questions
+| No. | Legal Question | Legal Area | Priority | Responsible Agent |
 |-----|-------------|--------------|-----------|-------------------|
-| RF-001 | [Konkrete Rechtsfrage?] | [CIV/LAB/CRIM/PUB/Spezial] | [HIGH/MEDIUM/LOW] | [@agent-xxx] |
+| RF-001 | [Specific legal question?] | [CIV/LAB/CRIM/PUB/Special] | [HIGH/MEDIUM/LOW] | [@agent-xxx] |
 | RF-002 | [...] | [...] | [...] | [...] |
 
-### Betroffene Normen (vorläufig)
-- [§ XX BGB: Kurzbeschreibung]
+### Affected Norms (preliminary)
+- [§ XX BGB: Brief description]
 - [§ XX StGB: ...]
 
-### Rechtsgebiets-Zuordnung
+### Legal Area Assignment
 ```
-Hauptrechtsgebiet: [Zivilrecht/Arbeitsrecht/...]
-Nebenrechtsgebiete: [Liste]
+Main legal area: [Civil Law/Labor Law/...]
+Secondary legal areas: [List]
 ```
 
 ---
 
-## 5. MANDANTEN-ZIELE
+## 5. CLIENT OBJECTIVES
 
-**Primäres Ziel:**
-[Was will der Mandant erreichen?]
+**Primary Objective:**
+[What does the client want to achieve?]
 
-**Sekundäre Ziele:**
-1. [Ziel 1]
-2. [Ziel 2]
+**Secondary Objectives:**
+1. [Objective 1]
+2. [Objective 2]
 
-**Zu vermeidende Szenarien:**
-- [Szenario 1]
-- [Szenario 2]
+**Scenarios to Avoid:**
+- [Scenario 1]
+- [Scenario 2]
 
 ---
 
-## 6. AGENTEN-KOORDINATION
+## 6. AGENT COORDINATION
 
-### Zugewiesene Agenten
-| Agent | Auftrag | Status | Output | Abschluss |
+### Assigned Agents
+| Agent | Task | Status | Output | Completion |
 |-------|---------|--------|--------|-----------|
-| @agent-civillaw | [Rechtsfrage RF-001 prüfen] | [PENDING/WIP/DONE] | [Dateiname] | [YYYY-MM-DD] |
-| @agent-speciallaw | [Rechtsfrage RF-002 prüfen] | [PENDING/WIP/DONE] | [Dateiname] | [YYYY-MM-DD] |
+| @agent-civillaw | [Review legal question RF-001] | [PENDING/WIP/DONE] | [Filename] | [YYYY-MM-DD] |
+| @agent-speciallaw | [Review legal question RF-002] | [PENDING/WIP/DONE] | [Filename] | [YYYY-MM-DD] |
 
-### Abhängigkeiten
+### Dependencies
 ```
-@agent-civillaw → muss abgeschlossen sein vor @agent-speciallaw
-@agent-speciallaw → parallel zu @agent-publiclaw
+@agent-civillaw → must be completed before @agent-speciallaw
+@agent-speciallaw → parallel to @agent-publiclaw
 ```
 
-### Übergaben zwischen Agenten
-| Von | An | Inhalt | Datum |
+### Handovers Between Agents
+| From | To | Content | Date |
 |-----|----|--------|-------|
-| @agent-civillaw | @agent-speciallaw | [Bewertung Vertragsrecht] | [YYYY-MM-DD] |
+| @agent-civillaw | @agent-speciallaw | [Contract law assessment] | [YYYY-MM-DD] |
 
 ---
 
-## 7. GUTACHTEN & VALIDIERUNG
+## 7. OPINIONS & VALIDATION
 
-### Erstellte Gutachten
-| Dateiname | Agent | Erstellt | Validator-Status |
+### Created Opinions
+| Filename | Agent | Created | Validator Status |
 |-----------|-------|----------|------------------|
 | OPINION_[CASE-ID]_civillaw_001.md | @agent-civillaw | [YYYY-MM-DD] | [APPROVED/REVISE/PENDING] |
 | OPINION_[CASE-ID]_speciallaw_001.md | @agent-speciallaw | [YYYY-MM-DD] | [APPROVED/REVISE/PENDING] |
 
 ### Validation Report
-**Datei:** VALIDATION_REPORT_[CASE-ID].md
+**File:** VALIDATION_REPORT_[CASE-ID].md
 **Status:** [APPROVED / REVISE / REJECTED]
-**Geprüft von:** @validator-legal
-**Datum:** [YYYY-MM-DD]
+**Reviewed by:** @validator-legal
+**Date:** [YYYY-MM-DD]
 
-**Validator-Anmerkungen:**
-- [Anmerkung 1]
-- [Anmerkung 2]
+**Validator Comments:**
+- [Comment 1]
+- [Comment 2]
 
 ---
 
-## 8. FINALE DOKUMENTATION
+## 8. FINAL DOCUMENTATION
 
-### Finales Gutachten
-**Datei:** FINAL_OPINION_[CASE-ID].md
-**Erstellt von:** @scribe-legal
-**Datum:** [YYYY-MM-DD]
+### Final Opinion
+**File:** FINAL_OPINION_[CASE-ID].md
+**Created by:** @scribe-legal
+**Date:** [YYYY-MM-DD]
 **Status:** [DRAFT / FINAL]
 
-### Handlungsempfehlungen
-1. [Konkrete Empfehlung 1 mit Begründung]
-2. [Konkrete Empfehlung 2 mit Begründung]
+### Recommendations for Action
+1. [Specific recommendation 1 with justification]
+2. [Specific recommendation 2 with justification]
 3. [...]
 
-### Fristen & To-Do
-| Frist | Maßnahme | Verantwortlich | Status |
+### Deadlines & To-Do
+| Deadline | Action | Responsible | Status |
 |-------|----------|----------------|--------|
-| [YYYY-MM-DD] | [Was muss getan werden?] | [Mandant/Anwalt] | [OPEN/DONE] |
+| [YYYY-MM-DD] | [What needs to be done?] | [Client/Lawyer] | [OPEN/DONE] |
 
 ---
 
-## 9. KOMMUNIKATION MIT MANDANT
+## 9. CLIENT COMMUNICATION
 
-### Rückfragen an Mandant
-| Datum | Frage | Antwort erhalten | Einfluss auf Fall |
+### Questions to Client
+| Date | Question | Answer Received | Impact on Case |
 |-------|-------|------------------|-------------------|
-| [YYYY-MM-DD] | [Konkrete Frage] | [JA/NEIN] | [Beschreibung] |
+| [YYYY-MM-DD] | [Specific question] | [YES/NO] | [Description] |
 
-### Beratungsgespräche
-| Datum | Teilnehmer | Thema | Protokoll |
+### Consultation Meetings
+| Date | Participants | Topic | Minutes |
 |-------|------------|-------|-----------|
-| [YYYY-MM-DD] | [Namen] | [Thema] | [Link zu Notizen] |
+| [YYYY-MM-DD] | [Names] | [Topic] | [Link to notes] |
 
 ---
 
-## 10. KOSTEN & GEBÜHREN
+## 10. COSTS & FEES
 
-**Geschätzter Gegenstandswert:** [Betrag in EUR]
-**Geschätzte Anwaltsgebühren:** [Betrag nach RVG]
-**Gerichtskosten (falls relevant):** [Betrag]
+**Estimated Value in Dispute:** [Amount in EUR]
+**Estimated Attorney's Fees:** [Amount according to RVG]
+**Court Costs (if relevant):** [Amount]
 
-**Kostenrisiko:**
-[Bewertung des Kostenrisikos bei Prozess]
+**Cost Risk:**
+[Assessment of cost risk in litigation]
 
 ---
 
-## 11. ARCHIVIERUNG
+## 11. ARCHIVING
 
-**Mandat abgeschlossen:** [YYYY-MM-DD]
-**Finale Dokumente:**
+**Mandate Completed:** [YYYY-MM-DD]
+**Final Documents:**
 - FINAL_OPINION_[CASE-ID].md
 - VALIDATION_REPORT_[CASE-ID].md
-- Alle OPINION_*.md Dateien
-- Alle Beweismittel
+- All OPINION_*.md files
+- All evidence
 
-**Archiv-Pfad:** `/Legal-GodMode/cases/[Jahr]/[CASE-ID]/`
-
----
-
-## 12. NOTIZEN & BESONDERHEITEN
-
-[Freitext für wichtige Hinweise, Besonderheiten des Falls, strategische Überlegungen, etc.]
+**Archive Path:** `/Legal-GodMode/cases/[Year]/[CASE-ID]/`
 
 ---
 
-## METADATEN
+## 12. NOTES & SPECIAL FEATURES
 
-**Template-Version:** 1.0
-**Erstellt von:** Legal-GodMode Orchestrator
-**Workflow-Status:**
+[Free text for important notes, special features of the case, strategic considerations, etc.]
+
+---
+
+## METADATA
+
+**Template Version:** 1.0
+**Created by:** Legal-GodMode Orchestrator
+**Workflow Status:**
 
 ```
-[ ] Sachverhalt vollständig erfasst
-[ ] Beweismittel gesammelt
-[ ] Rechtsfragen identifiziert
-[ ] Agenten beauftragt
-[ ] Gutachten erstellt
+[ ] Facts completely recorded
+[ ] Evidence collected
+[ ] Legal questions identified
+[ ] Agents commissioned
+[ ] Opinions created
 [ ] Validation APPROVED
-[ ] Finales Gutachten erstellt
-[ ] Mandant informiert
-[ ] Mandat abgeschlossen
+[ ] Final opinion created
+[ ] Client informed
+[ ] Mandate completed
 ```
 
 ---
 
-*Diese Akte wird vom Orchestrator gepflegt und mit jedem Workflow-Schritt aktualisiert.*
+*This file is maintained by the Orchestrator and updated with each workflow step.*

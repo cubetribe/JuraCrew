@@ -1,251 +1,251 @@
-# Rechtsgutachten [Mandat-ID]_[Agent]_[Nummer]
+# Legal Opinion [Mandate-ID]_[Agent]_[Number]
 
 **Agent:** [@agent-xxx]
-**Rechtsgebiet:** [Zivilrecht/Arbeitsrecht/Strafrecht/Öffentliches Recht/Spezialgebiet]
-**Mandat-ID:** [CASE-YYYY-NNNN]
-**Gutachten-Nummer:** [001/002/...]
-**Erstellt:** [YYYY-MM-DD]
+**Legal Area:** [Civil Law/Labor Law/Criminal Law/Public Law/Special Area]
+**Mandate-ID:** [CASE-YYYY-NNNN]
+**Opinion Number:** [001/002/...]
+**Created:** [YYYY-MM-DD]
 **Status:** [DRAFT / FINAL / REVISED]
 
 ---
 
-## 1. SACHVERHALT
+## 1. FACTS
 
-[Relevanter Ausschnitt des Sachverhalts für dieses Gutachten]
+[Relevant excerpt of the facts for this opinion]
 
-**Beteiligte:**
-- [Partei A: Rolle]
-- [Partei B: Rolle]
+**Parties:**
+- [Party A: Role]
+- [Party B: Role]
 
-**Zeitlicher Ablauf (relevant für diese Rechtsfrage):**
-| Datum | Ereignis |
+**Timeline (relevant to this legal question):**
+| Date | Event |
 |-------|----------|
-| [YYYY-MM-DD] | [Ereignis 1] |
-| [YYYY-MM-DD] | [Ereignis 2] |
+| [YYYY-MM-DD] | [Event 1] |
+| [YYYY-MM-DD] | [Event 2] |
 
-**Vorliegende Beweismittel:**
-- [Dokument 1]
-- [Dokument 2]
-
----
-
-## 2. RECHTSFRAGE
-
-[Konkrete, präzise formulierte Rechtsfrage im Gutachtenstil]
-
-**Beispiele:**
-- "Ist der Vertrag zwischen A und B gemäß § 142 Abs. 1 BGB wirksam angefochten worden?"
-- "Liegt eine ordnungsgemäße Kündigung i.S.d. § 623 BGB vor?"
-- "Hat sich X gemäß § 223 Abs. 1 StGB der Körperverletzung strafbar gemacht?"
+**Available Evidence:**
+- [Document 1]
+- [Document 2]
 
 ---
 
-## 3. GUTACHTEN (Gutachtenstil)
+## 2. LEGAL QUESTION
 
-### Obersatz
-[Rechtliche Anspruchsgrundlage oder Tatbestand benennen]
+[Specific, precisely formulated legal question in Gutachtenstil]
 
-**Beispiel:**
-"A könnte gegen B einen Anspruch auf Schadensersatz gemäß § 280 Abs. 1 BGB haben."
+**Examples:**
+- "Has the contract between A and B been validly rescinded pursuant to § 142 Abs. 1 BGB?"
+- "Is there a proper termination within the meaning of § 623 BGB?"
+- "Did X commit the crime of assault pursuant to § 223 Abs. 1 StGB?"
 
 ---
 
-### Prüfung
+## 3. OPINION (Gutachtenstil)
 
-#### I. Tatbestandsvoraussetzung 1
+### Major Premise (Obersatz)
+[Identify legal basis for claim or criminal provision]
+
+**Example:**
+"A could have a claim against B for damages pursuant to § 280 Abs. 1 BGB."
+
+---
+
+### Analysis
+
+#### I. Statutory Requirement 1
 
 ##### 1. Definition
-[Normative Definition der Voraussetzung mit Rechtsprechungs-/Literaturverweis]
+[Normative definition of the requirement with references to case law/literature]
 
-**Beispiel:**
-"Ein Schuldverhältnis i.S.d. § 280 Abs. 1 BGB ist jede Sonderrechtsbeziehung zwischen Personen, die zu gegenseitigen Rechten und Pflichten führt (BGH NJW 2020, 1234; Palandt/Grüneberg, BGB, 82. Aufl. 2023, § 280 Rn. 5)."
+**Example:**
+"An obligation within the meaning of § 280 Abs. 1 BGB is any special legal relationship between persons that leads to mutual rights and duties (BGH NJW 2020, 1234; Palandt/Grüneberg, BGB, 82nd ed. 2023, § 280 Rn. 5)."
 
-##### 2. Subsumtion
-[Anwendung der Definition auf den Sachverhalt]
+##### 2. Subsumption
+[Application of the definition to the facts]
 
-**Beispiel:**
-"Zwischen A und B besteht ein Kaufvertrag vom 15.03.2025, der gemäß § 433 BGB ein Schuldverhältnis begründet hat. A ist als Käufer berechtigt, die Übergabe und Übereignung der Kaufsache zu verlangen (§ 433 Abs. 1 S. 1 BGB)."
+**Example:**
+"Between A and B there exists a sales contract dated 15.03.2025, which established an obligation pursuant to § 433 BGB. A is entitled as buyer to demand delivery and transfer of ownership of the purchased item (§ 433 Abs. 1 S. 1 BGB)."
 
-##### 3. Zwischenergebnis
-[Ergebnis für diese Voraussetzung]
+##### 3. Interim Result
+[Result for this requirement]
 
-**Beispiel:**
-"Ein Schuldverhältnis zwischen A und B (+) liegt vor."
+**Example:**
+"An obligation between A and B (+) exists."
 
 ---
 
-#### II. Tatbestandsvoraussetzung 2
+#### II. Statutory Requirement 2
 
 ##### 1. Definition
 [...]
 
-##### 2. Subsumtion
+##### 2. Subsumption
 [...]
 
-##### 3. Zwischenergebnis
+##### 3. Interim Result
 [...]
 
 ---
 
-[Weitere Tatbestandsvoraussetzungen analog strukturiert]
+[Further statutory requirements structured analogously]
 
 ---
 
-#### III. Problematische Voraussetzung (falls vorhanden)
+#### III. Problematic Requirement (if present)
 
-##### 1. Meinungsstand
+##### 1. State of Opinion
 
-**Ansicht 1 (h.M.):**
-[Herrschende Meinung mit Begründung und Fundstellen]
+**View 1 (prevailing view):**
+[Prevailing opinion with justification and references]
 
-**Ansicht 2 (Mindermeinung):**
-[Gegenmeinung mit Begründung und Fundstellen]
+**View 2 (minority view):**
+[Counter opinion with justification and references]
 
-##### 2. Stellungnahme
-[Eigene Bewertung mit Begründung]
+##### 2. Statement
+[Own assessment with justification]
 
-**Beispiel:**
-"Der herrschenden Meinung ist zu folgen, da sie dem Schutzzweck der Norm besser gerecht wird und mit der ständigen Rechtsprechung des BGH im Einklang steht (BGH NJW 2022, 5678)."
+**Example:**
+"The prevailing view should be followed because it better serves the protective purpose of the norm and is consistent with the established case law of the BGH (BGH NJW 2022, 5678)."
 
-##### 3. Anwendung auf den Fall
-[Welche Konsequenz hat die gewählte Ansicht für den Sachverhalt?]
+##### 3. Application to the Case
+[What consequence does the chosen view have for the facts?]
 
-##### 4. Zwischenergebnis
-[Ergebnis unter Berücksichtigung der Problematik]
-
----
-
-### Ergebnis
-[Abschließende Beantwortung der Rechtsfrage]
-
-**Beispiel:**
-"A hat gegen B einen Anspruch auf Schadensersatz gemäß § 280 Abs. 1 BGB in Höhe von [Betrag] EUR."
+##### 4. Interim Result
+[Result considering the problematic issue]
 
 ---
 
-## 4. NORMZITIERUNG (vollständig)
+### Result
+[Final answer to the legal question]
 
-**Verwendete Normen:**
-- § 280 Abs. 1 BGB (Schadensersatz wegen Pflichtverletzung)
-- § 433 BGB (Vertragstypische Pflichten beim Kaufvertrag)
+**Example:**
+"A has a claim against B for damages pursuant to § 280 Abs. 1 BGB in the amount of [Amount] EUR."
+
+---
+
+## 4. COMPLETE CITATION OF NORMS
+
+**Norms Used:**
+- § 280 Abs. 1 BGB (Damages for breach of duty)
+- § 433 BGB (Typical contractual duties in sales contracts)
 - [...]
 
-**Rechtsprechung:**
-- BGH, Urteil vom 15.06.2022, Az. VIII ZR 123/21, NJW 2022, 5678
+**Case Law:**
+- BGH, Decision of 15.06.2022, Case No. VIII ZR 123/21, NJW 2022, 5678
 - [...]
 
-**Literatur:**
-- Palandt/Grüneberg, BGB, 82. Aufl. 2023, § 280 Rn. 5-12
+**Literature:**
+- Palandt/Grüneberg, BGB, 82nd ed. 2023, § 280 Rn. 5-12
 - [...]
 
 ---
 
-## 5. ABGRENZUNGS-TABELLE (PFLICHTFELD!)
+## 5. DEMARCATION TABLE (MANDATORY!)
 
-| Rechtsfrage im Grenzbereich | Meine Einschätzung | Übergabe an | Begründung |
+| Legal Question at Boundary | My Assessment | Handover to | Justification |
 |-----------------------------|-------------------|-------------|------------|
-| [Frage, die potentiell in anderes Rechtsgebiet fällt] | ✅ Relevant für mich / ❌ Nicht mein Gebiet | [@agent-xxx] | [Warum gehört das zum anderen Agenten?] |
-| [Beispiel: "Datenschutzrechtliche Bewertung der E-Mail-Kommunikation"] | ❌ Nicht mein Gebiet | @agent-speciallaw | [IT/Datenschutz ist Spezialgebiet] |
-| [Beispiel: "Strafrechtliche Relevanz der Drohungen"] | ❌ Nicht mein Gebiet | @agent-criminallaw | [Strafrechtliche Bewertung außerhalb Zivilrecht] |
+| [Question that potentially falls into another legal area] | ✅ Relevant for me / ❌ Not my area | [@agent-xxx] | [Why does this belong to the other agent?] |
+| [Example: "Data protection assessment of email communication"] | ❌ Not my area | @agent-speciallaw | [IT/Data protection is special area] |
+| [Example: "Criminal relevance of threats"] | ❌ Not my area | @agent-criminallaw | [Criminal assessment outside civil law] |
 
-**Erläuterung:**
-Ich habe mich auf die zivilrechtliche Bewertung des Vertragsverhältnisses beschränkt. Die datenschutzrechtlichen Implikationen der verarbeiteten E-Mails sowie die strafrechtliche Einordnung der ausgesprochenen Drohungen habe ich bewusst ausgeklammert und an die zuständigen Fachagenten übergeben.
+**Explanation:**
+I have focused on the civil law assessment of the contractual relationship. I have deliberately excluded the data protection implications of the processed emails and the criminal classification of the threats made, and handed these over to the responsible specialized agents.
 
 ---
 
-## 6. ZULIEFERUNGEN VON ANDEREN AGENTEN
+## 6. INPUTS FROM OTHER AGENTS
 
-**Falls vorhanden: Ergebnisse anderer Agenten, die in dieses Gutachten einfließen**
+**If present: Results from other agents that feed into this opinion**
 
-| Agent | Gutachten | Relevantes Ergebnis | Einfluss auf mein Gutachten |
+| Agent | Opinion | Relevant Result | Impact on My Opinion |
 |-------|-----------|---------------------|----------------------------|
-| @agent-speciallaw | OPINION_[ID]_speciallaw_001.md | [Zusammenfassung] | [Wie beeinflusst das meine Bewertung?] |
+| @agent-speciallaw | OPINION_[ID]_speciallaw_001.md | [Summary] | [How does this influence my assessment?] |
 
 ---
 
-## 7. ÜBERGABEN AN ANDERE AGENTEN
+## 7. HANDOVERS TO OTHER AGENTS
 
-**Falls erforderlich: Welche Fragen ich an andere Agenten weitergebe**
+**If required: Questions I hand over to other agents**
 
-| Frage | Übergibt an | Begründung |
+| Question | Handed to | Justification |
 |-------|-------------|------------|
-| [Konkrete Folgefrage] | [@agent-xxx] | [Warum ist der andere Agent zuständig?] |
+| [Specific follow-up question] | [@agent-xxx] | [Why is the other agent responsible?] |
 
-**Beispiel:**
-"Die Frage, ob die Kündigung auch nach § 626 BGB (außerordentliche Kündigung) gerechtfertigt wäre, übergebe ich an @agent-laborlaw, da dies arbeitsrechtliche Spezialmaterie ist."
-
----
-
-## 8. HANDLUNGSEMPFEHLUNGEN (aus Sicht dieses Rechtsgebiets)
-
-**Sofortmaßnahmen:**
-1. [Konkrete Handlung 1 mit Frist]
-2. [Konkrete Handlung 2 mit Frist]
-
-**Mittelfristige Maßnahmen:**
-1. [Maßnahme 1]
-2. [Maßnahme 2]
-
-**Risikobewertung:**
-- **Erfolgsaussichten:** [Hoch/Mittel/Gering] - [Begründung]
-- **Kostenrisiko:** [Beschreibung]
-- **Prozessrisiko:** [Beschreibung]
+**Example:**
+"The question of whether the termination would also be justified under § 626 BGB (extraordinary termination) I hand over to @agent-laborlaw, as this is specialized labor law matter."
 
 ---
 
-## 9. OFFENE FRAGEN & UNSICHERHEITEN
+## 8. RECOMMENDATIONS FOR ACTION (from this legal area's perspective)
 
-**Faktische Unsicherheiten:**
-- [Welche Tatsachen sind noch unklar?]
-- [Welche Beweismittel fehlen?]
+**Immediate Measures:**
+1. [Specific action 1 with deadline]
+2. [Specific action 2 with deadline]
 
-**Rechtliche Unsicherheiten:**
-- [Gibt es ungeklärte Rechtsfragen?]
-- [Ist die Rechtslage umstritten?]
+**Medium-term Measures:**
+1. [Measure 1]
+2. [Measure 2]
 
-**Empfehlung für weitere Ermittlungen:**
-- [Was sollte noch geklärt werden?]
-
----
-
-## 10. ZUSAMMENFASSUNG (Kurzfassung für @validator-legal)
-
-**Rechtsfrage:**
-[1 Satz]
-
-**Ergebnis:**
-[1-2 Sätze]
-
-**Kritische Punkte:**
-- [Punkt 1]
-- [Punkt 2]
-
-**Abhängigkeiten:**
-- [Wartet auf Gutachten von @agent-xxx]
-- [Übergibt an @agent-yyy]
+**Risk Assessment:**
+- **Chances of Success:** [High/Medium/Low] - [Justification]
+- **Cost Risk:** [Description]
+- **Litigation Risk:** [Description]
 
 ---
 
-## 11. METADATEN
+## 9. OPEN QUESTIONS & UNCERTAINTIES
 
-**Hard Constraints erfüllt:**
-- [x] Gutachtenstil (Obersatz, Definition, Subsumtion, Ergebnis)
-- [x] Abgrenzungs-Tabelle ausgefüllt
-- [x] Alle Normen mit Fundstellen zitiert
-- [x] Keine Aussagen außerhalb meines Rechtsgebiets
-- [x] Übergaben dokumentiert
+**Factual Uncertainties:**
+- [What facts are still unclear?]
+- [What evidence is missing?]
 
-**Template-Version:** 1.0
-**Workflow-Status:** [Bereit für @validator-legal]
+**Legal Uncertainties:**
+- [Are there unresolved legal questions?]
+- [Is the legal situation disputed?]
 
----
-
-## 12. ANHANG
-
-**Falls erforderlich: Zusätzliche Analysen, Berechnungen, Schemata**
-
-[Platz für ergänzende Dokumente, Berechnungen, Prüfungsschemata, etc.]
+**Recommendation for Further Investigation:**
+- [What should still be clarified?]
 
 ---
 
-*Dieses Gutachten wurde nach den Hard Constraints von Legal-GodMode erstellt und ist Teil der Mandats-Akte [CASE-ID].*
+## 10. SUMMARY (Brief version for @validator-legal)
+
+**Legal Question:**
+[1 sentence]
+
+**Result:**
+[1-2 sentences]
+
+**Critical Points:**
+- [Point 1]
+- [Point 2]
+
+**Dependencies:**
+- [Waiting for opinion from @agent-xxx]
+- [Hands over to @agent-yyy]
+
+---
+
+## 11. METADATA
+
+**Hard Constraints Fulfilled:**
+- [x] Gutachtenstil (Obersatz, Definition, Subsumption, Result)
+- [x] Demarcation table completed
+- [x] All norms cited with references
+- [x] No statements outside my legal area
+- [x] Handovers documented
+
+**Template Version:** 1.0
+**Workflow Status:** [Ready for @validator-legal]
+
+---
+
+## 12. APPENDIX
+
+**If required: Additional analyses, calculations, schemas**
+
+[Space for supplementary documents, calculations, examination schemas, etc.]
+
+---
+
+*This opinion was created according to the Hard Constraints of Legal-GodMode and is part of mandate file [CASE-ID].*

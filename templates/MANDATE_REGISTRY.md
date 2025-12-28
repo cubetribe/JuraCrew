@@ -1,98 +1,98 @@
-# Mandats-Registry
+# Mandate Registry
 
-**Letzte Aktualisierung:** 2025-12-28
+**Last Updated:** 2025-12-28
 
 ---
 
-## Aktive Mandate
+## Active Mandates
 
-| Mandat-ID | Mandant | Status | Rechtsgebiete | Zuständige Agenten | Erstellt | Letzte Aktivität | Priorität |
+| Mandate-ID | Client | Status | Legal Areas | Assigned Agents | Created | Last Activity | Priority |
 |-----------|---------|--------|---------------|-------------------|----------|------------------|-----------|
 | - | - | - | - | - | - | - | - |
 
 ---
 
-## Abgeschlossene Mandate (letzte 10)
+## Completed Mandates (last 10)
 
-| Mandat-ID | Mandant | Rechtsgebiete | Abgeschlossen | Finale Dokumente |
+| Mandate-ID | Client | Legal Areas | Completed | Final Documents |
 |-----------|---------|---------------|---------------|------------------|
 | - | - | - | - | - |
 
 ---
 
-## Archivierte Mandate
+## Archived Mandates
 
-Für vollständiges Archiv siehe: `/Legal-GodMode/cases/[Jahr]/`
+For complete archive see: `/Legal-GodMode/cases/[Year]/`
 
 ---
 
-## Status-Definitionen
+## Status Definitions
 
-| Status | Beschreibung | Nächster Schritt |
+| Status | Description | Next Step |
 |--------|--------------|------------------|
-| **INTAKE** | Mandat eingegangen, Fakten werden gesammelt | @researcher-legal sammelt Sachverhalt |
-| **REVIEW** | Fakten vollständig, Rechtsfragen werden identifiziert | Orchestrator ordnet Agenten zu |
-| **ASSIGNED** | Agenten wurden beauftragt | Agenten erstellen Gutachten |
-| **EXPERT_WIP** | Fachagenten arbeiten an Gutachten | Warten auf Abschluss |
-| **VALIDATION** | Gutachten bei @validator-legal zur Prüfung | @validator-legal prüft |
-| **REVISE** | Validator fordert Überarbeitung | Betroffene Agenten korrigieren |
-| **SYNTHESIS** | Validation APPROVED, @scribe-legal finalisiert | @scribe-legal erstellt FINAL_OPINION |
-| **COMPLETED** | Finales Gutachten erstellt und übergeben | Archivierung |
-| **ON_HOLD** | Mandat pausiert (z.B. auf Mandanten-Input wartend) | User-Aktion erforderlich |
-| **UPDATED** | Bestehender Fall mit neuen Fakten aktualisiert | Supplement-Gutachten erstellen |
+| **INTAKE** | Mandate received, facts being collected | @researcher-legal collects facts |
+| **REVIEW** | Facts complete, legal questions being identified | Orchestrator assigns agents |
+| **ASSIGNED** | Agents have been commissioned | Agents create opinions |
+| **EXPERT_WIP** | Expert agents working on opinions | Waiting for completion |
+| **VALIDATION** | Opinions at @validator-legal for review | @validator-legal reviews |
+| **REVISE** | Validator requests revision | Affected agents correct |
+| **SYNTHESIS** | Validation APPROVED, @scribe-legal finalizing | @scribe-legal creates FINAL_OPINION |
+| **COMPLETED** | Final opinion created and delivered | Archiving |
+| **ON_HOLD** | Mandate paused (e.g., waiting for client input) | User action required |
+| **UPDATED** | Existing case updated with new facts | Create supplement opinion |
 
 ---
 
-## Rechtsgebiets-Abkürzungen
+## Legal Area Abbreviations
 
-| Kürzel | Rechtsgebiet | Zuständiger Agent |
+| Code | Legal Area | Responsible Agent |
 |--------|--------------|-------------------|
-| **CIV** | Zivilrecht (BGB, Vertragsrecht) | @agent-civillaw |
-| **LAB** | Arbeitsrecht | @agent-laborlaw |
-| **CRIM** | Strafrecht | @agent-criminallaw |
-| **PUB** | Öffentliches Recht | @agent-publiclaw |
-| **IT** | IT-Recht, Datenschutz | @agent-speciallaw |
-| **IP** | Immaterialgüterrecht (Marken, Patente) | @agent-speciallaw |
-| **MED** | Medizinrecht | @agent-speciallaw |
-| **COMP** | Wettbewerbsrecht | @agent-speciallaw |
+| **CIV** | Civil Law (BGB, Contract Law) | @agent-civillaw |
+| **LAB** | Labor Law | @agent-laborlaw |
+| **CRIM** | Criminal Law | @agent-criminallaw |
+| **PUB** | Public Law | @agent-publiclaw |
+| **IT** | IT Law, Data Protection | @agent-speciallaw |
+| **IP** | Intellectual Property (Trademarks, Patents) | @agent-speciallaw |
+| **MED** | Medical Law | @agent-speciallaw |
+| **COMP** | Competition Law | @agent-speciallaw |
 
 ---
 
-## Priorisierungs-Regeln
+## Prioritization Rules
 
-| Priorität | Kriterium | Behandlung |
+| Priority | Criterion | Treatment |
 |-----------|-----------|------------|
-| **🔴 URGENT** | Fristen < 7 Tage | Sofortige Bearbeitung |
-| **🟠 HIGH** | Fristen < 30 Tage oder hoher Streitwert | Priorisierte Bearbeitung |
-| **🟡 MEDIUM** | Standard-Mandat | Normale Bearbeitung |
-| **🟢 LOW** | Beratung ohne Zeitdruck | Nach Kapazität |
+| **🔴 URGENT** | Deadlines < 7 days | Immediate processing |
+| **🟠 HIGH** | Deadlines < 30 days or high amount in dispute | Prioritized processing |
+| **🟡 MEDIUM** | Standard mandate | Normal processing |
+| **🟢 LOW** | Consultation without time pressure | As capacity allows |
 
 ---
 
-## Nutzung
+## Usage
 
-### Neues Mandat anlegen
+### Create New Mandate
 ```bash
-Mandat-ID: CASE-YYYY-NNNN (z.B. CASE-2025-0001)
-Mandant: [Name/Firma]
+Mandate-ID: CASE-YYYY-NNNN (e.g. CASE-2025-0001)
+Client: [Name/Company]
 Status: INTAKE
-Rechtsgebiete: [CIV, LAB, ...]
-Zuständige Agenten: [TBD]
-Erstellt: [YYYY-MM-DD]
-Priorität: [URGENT/HIGH/MEDIUM/LOW]
+Legal Areas: [CIV, LAB, ...]
+Assigned Agents: [TBD]
+Created: [YYYY-MM-DD]
+Priority: [URGENT/HIGH/MEDIUM/LOW]
 ```
 
-### Status aktualisieren
-Bei jedem Workflow-Schritt Status in Tabelle aktualisieren.
+### Update Status
+Update status in table with each workflow step.
 
-### Mandat abschließen
+### Complete Mandate
 1. Status → COMPLETED
-2. Zeile in "Abgeschlossene Mandate" verschieben
-3. Archivierungs-Link hinzufügen
+2. Move row to "Completed Mandates"
+3. Add archiving link
 
 ---
 
-## Archivierungs-Struktur
+## Archiving Structure
 
 ```
 /Legal-GodMode/cases/
@@ -109,16 +109,16 @@ Bei jedem Workflow-Schritt Status in Tabelle aktualisieren.
 
 ---
 
-## Statistiken (2025)
+## Statistics (2025)
 
-| Metrik | Wert |
+| Metric | Value |
 |--------|------|
-| Gesamt bearbeitete Mandate | 0 |
-| Abgeschlossene Mandate | 0 |
-| Aktive Mandate | 0 |
-| Durchschnittliche Bearbeitungszeit | - |
-| Häufigstes Rechtsgebiet | - |
+| Total processed mandates | 0 |
+| Completed mandates | 0 |
+| Active mandates | 0 |
+| Average processing time | - |
+| Most common legal area | - |
 
 ---
 
-*Diese Registry wird automatisch vom Orchestrator gepflegt.*
+*This Registry is automatically maintained by the Orchestrator.*

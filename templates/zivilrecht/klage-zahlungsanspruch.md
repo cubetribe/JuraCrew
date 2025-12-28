@@ -1,197 +1,197 @@
-# Klage - Zahlungsanspruch
+# Complaint - Payment Claim
 
-**Template für zivilrechtliche Zahlungsklagen**
-
----
-
-An das
-Landgericht [ORT]
-[Adresse]
-
-In Sachen
-
-[KLÄGER]
-[Adresse]
-- Kläger -
-
-Prozessbevollmächtigter:
-Rechtsanwalt [NAME]
-[Kanzleiadresse]
-
-gegen
-
-[BEKLAGTER]
-[Adresse]
-- Beklagter -
-
-wegen: Zahlungsanspruch aus [RECHTSGRUND]
-Streitwert: [BETRAG] EUR
-
-Az.: [AKTENZEICHEN] (falls bekannt)
+**Template for civil law payment claims**
 
 ---
 
-## K L A G E
+To the
+District Court [LOCATION]
+[Address]
 
-Sehr geehrte Damen und Herren,
+In the matter of
 
-namens und in Vollmacht des Klägers erhebe ich
+[PLAINTIFF]
+[Address]
+- Plaintiff -
 
-**K l a g e**
+Attorney of Record:
+Attorney [NAME]
+[Law Firm Address]
 
-und beantrage,
+against
 
-**den Beklagten zu verurteilen, an den Kläger [BETRAG] EUR nebst Zinsen in Höhe von [X] Prozentpunkten über dem Basiszinssatz seit [DATUM] zu zahlen.**
+[DEFENDANT]
+[Address]
+- Defendant -
 
----
+concerning: Payment claim from [LEGAL BASIS]
+Amount in dispute: [AMOUNT] EUR
 
-## I. Sachverhalt
-
-[DETAILLIERTER SACHVERHALT]
-
-1. Vertragsschluss
-   - Datum: [DATUM]
-   - Art: [KAUFVERTRAG/WERKVERTRAG/DIENSTVERTRAG]
-   - Gegenstand: [BESCHREIBUNG]
-   - Vereinbarter Preis: [BETRAG] EUR
-
-2. Leistung des Klägers
-   - [BESCHREIBUNG DER ERFÜLLUNGSHANDLUNG]
-   - Datum: [DATUM]
-
-3. Fälligkeit
-   - Zahlungsfrist: [DATUM/ZEITPUNKT]
-   - Fälligkeitseintritt: [DATUM]
-
-4. Zahlungsverzug
-   - Mahnung vom: [DATUM]
-   - Fristsetzung bis: [DATUM]
-   - Fruchtloser Fristablauf: [DATUM]
+Case No.: [CASE NUMBER] (if known)
 
 ---
 
-## II. Rechtliche Würdigung
+## C O M P L A I N T
 
-### A. Anspruchsgrundlage
+Dear Sir or Madam,
 
-Der Kläger hat gegen den Beklagten einen Anspruch auf Zahlung von [BETRAG] EUR aus § [NORM] BGB.
+on behalf and with authority of the Plaintiff, I hereby file
 
-#### 1. Anspruchsentstehung
+**C o m p l a i n t**
 
-**a) Vertragsschluss (§§ 145 ff. BGB)**
+and request,
 
-Zwischen den Parteien kam ein [VERTRAGSTYP] gemäß § [NORM] BGB wirksam zustande.
-
-- **Angebot**: [BESCHREIBUNG]
-- **Annahme**: [BESCHREIBUNG]
-- **Einigkeit**: Die Parteien waren sich über alle wesentlichen Vertragsbedingungen einig (essentialia negotii).
-
-**b) Fälligkeit der Gegenleistung**
-
-Die Zahlungspflicht des Beklagten ist gemäß § [NORM] BGB fällig geworden.
-
-[SUBSUMTION]
-
-**c) Leistung des Klägers**
-
-Der Kläger hat seine vertraglichen Pflichten vollständig erfüllt.
-
-[SUBSUMTION]
-
-#### 2. Kein Erlöschen des Anspruchs
-
-Der Anspruch ist nicht erloschen, insbesondere nicht durch:
-- Erfüllung (§ 362 BGB): Der Beklagte hat nicht gezahlt.
-- Aufrechnung (§§ 387 ff. BGB): Keine Aufrechnungserklärung erfolgt.
-- Erlass (§ 397 BGB): Kein Erlassvertrag geschlossen.
-
-#### 3. Rechtsprechung
-
-Die Anspruchsgrundlage ist gefestigt durch:
-
-- **BGH [FUNDSTELLE]**: [LEITSATZ]
-- **OLG [ORT] [FUNDSTELLE]**: [LEITSATZ]
-
-#### 4. Zwischenergebnis
-
-Der Kläger hat gegen den Beklagten einen Anspruch auf Zahlung von [BETRAG] EUR aus § [NORM] BGB.
+**to order the Defendant to pay the Plaintiff [AMOUNT] EUR plus interest at [X] percentage points above the base rate since [DATE].**
 
 ---
 
-### B. Verzugszinsen (§§ 286, 288 BGB)
+## I. Facts
 
-Zudem hat der Kläger Anspruch auf Verzugszinsen gemäß §§ 286, 288 BGB.
+[DETAILED FACTS]
 
-#### 1. Verzugseintritt
+1. Contract Formation
+   - Date: [DATE]
+   - Type: [SALES CONTRACT/WORK CONTRACT/SERVICE CONTRACT]
+   - Subject: [DESCRIPTION]
+   - Agreed Price: [AMOUNT] EUR
 
-Der Beklagte befindet sich seit [DATUM] in Verzug.
+2. Plaintiff's Performance
+   - [DESCRIPTION OF PERFORMANCE]
+   - Date: [DATE]
 
-**a) Fälligkeit**: siehe oben
-**b) Mahnung**: Mahnung vom [DATUM] (Anlage K [X])
-**c) Nichtleistung**: Trotz Mahnung erfolgte keine Zahlung
+3. Due Date
+   - Payment deadline: [DATE/TIME]
+   - Due date: [DATE]
 
-#### 2. Zinsberechnung
-
-- **Zinssatz**: [X] Prozentpunkte über dem Basiszinssatz (§ 288 Abs. [X] BGB)
-- **Beginn**: [DATUM] (Verzugseintritt)
-- **Zinsbetrag**: [BERECHNUNG]
-
-#### 3. Rechtsprechung
-
-- **BGH [FUNDSTELLE]**: [LEITSATZ zu Verzugszinsen]
-
----
-
-### C. Kostenerstattung
-
-Die Kosten für die anwaltliche Mahnung in Höhe von [BETRAG] EUR können als Verzugsschaden gemäß § 286 Abs. 1 BGB geltend gemacht werden.
-
-[OPTIONAL: Begründung]
+4. Default
+   - Reminder dated: [DATE]
+   - Deadline set until: [DATE]
+   - Unsuccessful expiration of deadline: [DATE]
 
 ---
 
-## III. Beweis
+## II. Legal Assessment
 
-Zum Beweis der vorgetragenen Tatsachen beruft sich der Kläger auf:
+### A. Legal Basis
 
-**1. Urkunden**
-- Anlage K 1: Vertrag vom [DATUM]
-- Anlage K 2: Rechnung vom [DATUM]
-- Anlage K 3: Mahnung vom [DATUM]
-- Anlage K 4: [WEITERE ANLAGEN]
+The Plaintiff has a claim against the Defendant for payment of [AMOUNT] EUR from § [NORM] BGB.
 
-**2. Zeugenbeweis**
-- [NAME], [ADRESSE] (falls erforderlich)
+#### 1. Creation of Claim
 
-**3. Sachverständigengutachten**
-- [Falls erforderlich, z.B. bei Werkverträgen]
+**a) Contract Formation (§§ 145 ff. BGB)**
+
+A valid [CONTRACT TYPE] pursuant to § [NORM] BGB was concluded between the parties.
+
+- **Offer**: [DESCRIPTION]
+- **Acceptance**: [DESCRIPTION]
+- **Agreement**: The parties agreed on all essential terms (essentialia negotii).
+
+**b) Due Date of Counter-Performance**
+
+The Defendant's payment obligation became due pursuant to § [NORM] BGB.
+
+[SUBSUMPTION]
+
+**c) Plaintiff's Performance**
+
+The Plaintiff has fully performed its contractual obligations.
+
+[SUBSUMPTION]
+
+#### 2. No Extinction of Claim
+
+The claim has not been extinguished, in particular not by:
+- Performance (§ 362 BGB): The Defendant did not pay.
+- Set-off (§§ 387 ff. BGB): No declaration of set-off made.
+- Release (§ 397 BGB): No release agreement concluded.
+
+#### 3. Case Law
+
+The legal basis is established by:
+
+- **BGH [CITATION]**: [KEY SENTENCE]
+- **OLG [LOCATION] [CITATION]**: [KEY SENTENCE]
+
+#### 4. Interim Result
+
+The Plaintiff has a claim against the Defendant for payment of [AMOUNT] EUR from § [NORM] BGB.
 
 ---
 
-## IV. Antrag
+### B. Default Interest (§§ 286, 288 BGB)
 
-Der Kläger beantragt,
+In addition, the Plaintiff has a claim for default interest pursuant to §§ 286, 288 BGB.
 
-**den Beklagten zu verurteilen, an den Kläger [BETRAG] EUR nebst Zinsen in Höhe von [X] Prozentpunkten über dem Basiszinssatz seit [DATUM] zu zahlen.**
+#### 1. Default
+
+The Defendant has been in default since [DATE].
+
+**a) Due date**: see above
+**b) Reminder**: Reminder dated [DATE] (Exhibit P [X])
+**c) Non-performance**: Despite reminder, no payment was made
+
+#### 2. Interest Calculation
+
+- **Interest rate**: [X] percentage points above the base rate (§ 288 Abs. [X] BGB)
+- **Start**: [DATE] (default)
+- **Interest amount**: [CALCULATION]
+
+#### 3. Case Law
+
+- **BGH [CITATION]**: [KEY SENTENCE on default interest]
 
 ---
 
-Mit vorzüglicher Hochachtung
+### C. Cost Reimbursement
 
-[UNTERSCHRIFT]
+The costs for the attorney's reminder in the amount of [AMOUNT] EUR can be claimed as default damages pursuant to § 286 Abs. 1 BGB.
+
+[OPTIONAL: Justification]
+
+---
+
+## III. Evidence
+
+To prove the facts alleged, the Plaintiff relies on:
+
+**1. Documents**
+- Exhibit P 1: Contract dated [DATE]
+- Exhibit P 2: Invoice dated [DATE]
+- Exhibit P 3: Reminder dated [DATE]
+- Exhibit P 4: [FURTHER EXHIBITS]
+
+**2. Witness Testimony**
+- [NAME], [ADDRESS] (if necessary)
+
+**3. Expert Opinion**
+- [If necessary, e.g., for work contracts]
+
+---
+
+## IV. Motion
+
+The Plaintiff requests,
+
+**to order the Defendant to pay the Plaintiff [AMOUNT] EUR plus interest at [X] percentage points above the base rate since [DATE].**
+
+---
+
+Respectfully submitted,
+
+[SIGNATURE]
 [NAME]
-Rechtsanwalt/Rechtsanwältin
+Attorney at Law
 
 ---
 
-## Anlagen
+## Exhibits
 
-- Anlage K 1: Vertrag vom [DATUM]
-- Anlage K 2: Rechnung vom [DATUM]
-- Anlage K 3: Mahnung vom [DATUM]
-- Anlage K 4: [WEITERE ANLAGEN]
-- Vollmacht
+- Exhibit P 1: Contract dated [DATE]
+- Exhibit P 2: Invoice dated [DATE]
+- Exhibit P 3: Reminder dated [DATE]
+- Exhibit P 4: [FURTHER EXHIBITS]
+- Power of Attorney
 
 ---
 
-**Hinweis**: Dieses Template muss an den konkreten Einzelfall angepasst werden. Alle [PLATZHALTER] sind zu ersetzen.
+**Note**: This template must be adapted to the specific case. All [PLACEHOLDERS] must be replaced.

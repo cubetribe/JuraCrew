@@ -1,139 +1,139 @@
 # Legal-GodMode Agents
 
-Orchestriertes Multi-Agent-System für juristische Gutachten.
+Orchestrated multi-agent system for legal opinions.
 
-## Agent-Übersicht
+## Agent Overview
 
 ### 1. researcher.md - Legal Intelligence Unit
 **Model:** Sonnet
 **Tools:** Read, Grep, Glob, Bash
-**Aufgabe:** Faktensammlung OHNE rechtliche Wertung
-**Output:** RESEARCH_REPORT mit Chronologie, Dokumenten, Fristen
+**Task:** Fact gathering WITHOUT legal evaluation
+**Output:** RESEARCH_REPORT with chronology, documents, deadlines
 
-**Abgrenzung:**
-- NICHT: Rechtliche Interpretation → Fachagenten
-- NICHT: Wertungen, Empfehlungen → Fachagenten
-- NUR: Rohdaten, Fakten, Fundstellen
-
----
-
-### 2. agent-contract.md - Vertragsrechtlicher Gutachter
-**Model:** Opus
-**Tools:** Read, Grep, Glob
-**Aufgabe:** Vertragsrecht (BGB AT, Schuldrecht AT, AGB)
-**Output:** Gutachten im Gutachtenstil
-
-**Zuständig für:**
-- §§104-185 BGB (Rechtsgeschäftslehre)
-- §§241-304 BGB (Schuldrecht AT)
-- §§305-310 BGB (AGB-Recht)
-
-**NICHT zuständig für:**
-- Mietrecht → @agent-tenancy
-- Strafrecht → @agent-criminal
-- Unternehmensrecht → @agent-corp
+**Demarcation:**
+- NOT: Legal interpretation → Specialist agents
+- NOT: Evaluations, recommendations → Specialist agents
+- ONLY: Raw data, facts, references
 
 ---
 
-### 3. agent-criminal.md - Strafrechtlicher Gutachter
+### 2. agent-contract.md - Contract Law Specialist
 **Model:** Opus
 **Tools:** Read, Grep, Glob
-**Aufgabe:** Strafrecht (StGB AT/BT, StPO)
-**Output:** Gutachten im Gutachtenstil
+**Task:** Contract law (BGB General Part, Law of Obligations General Part, Standard Terms)
+**Output:** Opinion in opinion style
 
-**Zuständig für:**
-- StGB AT (§§13-37 StGB)
-- Vermögensdelikte (§§242-263a StGB)
-- Körperverletzung (§§223-231 StGB)
-- Beleidigung (§§185-187 StGB)
+**Responsible for:**
+- §§104-185 BGB (Legal transactions doctrine)
+- §§241-304 BGB (Law of Obligations General Part)
+- §§305-310 BGB (Standard Terms Law)
 
-**NICHT zuständig für:**
-- Zivilrechtliche Schadensersatzansprüche → @agent-contract
-- Strafprozessuale Vertretung → Strafverteidiger (extern)
+**NOT responsible for:**
+- Tenancy law → @agent-tenancy
+- Criminal law → @agent-criminal
+- Corporate law → @agent-corp
 
 ---
 
-### 4. agent-tenancy.md - Mietrechtlicher Gutachter
+### 3. agent-criminal.md - Criminal Law Specialist
 **Model:** Opus
 **Tools:** Read, Grep, Glob
-**Aufgabe:** Mietrecht (§§535-580a BGB)
-**Output:** Gutachten im Gutachtenstil
+**Task:** Criminal law (StGB General/Special Part, StPO)
+**Output:** Opinion in opinion style
 
-**Zuständig für:**
-- Mietvertrag, Mietminderung (§§535-536 BGB)
-- Kündigung (§§542-580a BGB)
-- Kaution (§551 BGB)
-- Mieterhöhung (§§557-561 BGB)
-- Wohnraum & Gewerberaum
+**Responsible for:**
+- StGB General Part (§§13-37 StGB)
+- Property offenses (§§242-263a StGB)
+- Bodily injury (§§223-231 StGB)
+- Insult (§§185-187 StGB)
 
-**NICHT zuständig für:**
-- Allgemeines Vertragsrecht → @agent-contract
-- Strafrecht → @agent-criminal
+**NOT responsible for:**
+- Civil law claims for damages → @agent-contract
+- Criminal procedural representation → Criminal defense lawyer (external)
 
 ---
 
-### 5. agent-corp.md - Unternehmensrechtlicher Gutachter
+### 4. agent-tenancy.md - Tenancy Law Specialist
 **Model:** Opus
 **Tools:** Read, Grep, Glob
-**Aufgabe:** Unternehmensrecht (HGB, GmbHG, AktG)
-**Output:** Gutachten im Gutachtenstil
+**Task:** Tenancy law (§§535-580a BGB)
+**Output:** Opinion in opinion style
 
-**Zuständig für:**
-- Handelsrecht (§§1-372 HGB)
-- GmbH-Recht (GmbHG)
-- Aktienrecht (AktG - Grundlagen)
-- GbR (§§705-740 BGB)
-- Registerrecht
+**Responsible for:**
+- Rental agreement, rent reduction (§§535-536 BGB)
+- Termination (§§542-580a BGB)
+- Deposit (§551 BGB)
+- Rent increase (§§557-561 BGB)
+- Residential & commercial space
 
-**NICHT zuständig für:**
-- Allgemeines Vertragsrecht → @agent-contract
-- Arbeitsrecht → @agent-labor (falls vorhanden)
-- Insolvenzrecht → Fachanwalt (extern)
+**NOT responsible for:**
+- General contract law → @agent-contract
+- Criminal law → @agent-criminal
+
+---
+
+### 5. agent-corp.md - Corporate Law Specialist
+**Model:** Opus
+**Tools:** Read, Grep, Glob
+**Task:** Corporate law (HGB, GmbHG, AktG)
+**Output:** Opinion in opinion style
+
+**Responsible for:**
+- Commercial law (§§1-372 HGB)
+- GmbH law (GmbHG)
+- Stock corporation law (AktG - basics)
+- Civil law partnership (§§705-740 BGB)
+- Registry law
+
+**NOT responsible for:**
+- General contract law → @agent-contract
+- Labor law → @agent-labor (if available)
+- Insolvency law → Specialist lawyer (external)
 
 ---
 
 ### 6. validator-legal.md - Quality Gate
 **Model:** Sonnet
 **Tools:** Read, Grep, Glob, Bash
-**Aufgabe:** Formalkontrolle der Gutachten
+**Task:** Formal control of opinions
 **Output:** VALIDATION_REPORT
 
-**Prüft:**
-- Vollständigkeit der Struktur
-- Konsistenz der Daten
-- Abgrenzungs-Tabellen (PFLICHT!)
-- Quellenangaben
-- Format-Standards
-- Rechtsgebiets-Abgrenzung (Hard Constraints!)
+**Checks:**
+- Completeness of structure
+- Data consistency
+- Demarcation tables (MANDATORY!)
+- Source citations
+- Format standards
+- Area of law demarcation (Hard Constraints!)
 
-**NICHT prüft:**
-- Inhaltliche Rechtsprüfung → Fachagenten
-- Rechtliche Bewertungen → Fachagenten
+**Does NOT check:**
+- Substantive legal review → Specialist agents
+- Legal assessments → Specialist agents
 
-**Status-Codes:**
-- PASSED: Gutachten kann finalisiert werden
-- WARNINGS: Kann finalisiert werden, Warnungen dokumentieren
-- FAILED: Zurück an Fachagent zur Korrektur
+**Status codes:**
+- PASSED: Opinion can be finalized
+- WARNINGS: Can be finalized, document warnings
+- FAILED: Back to specialist agent for correction
 
 ---
 
-### 7. scribe-legal.md - Dokumentation & Finalisierung
+### 7. scribe-legal.md - Documentation & Finalization
 **Model:** Sonnet
 **Tools:** Read, Write, Edit, Grep, Glob
-**Aufgabe:** Finale Gutachten erstellen, MANDATE_REGISTRY pflegen
-**Output:** FINAL_OPINION (mandantengerecht)
+**Task:** Create final opinions, maintain MANDATE_REGISTRY
+**Output:** FINAL_OPINION (client-appropriate)
 
-**Aufgaben:**
-- Zusammenführung aller Fachgutachten
-- Verständliche Sprache (kein Juristendeutsch!)
-- Handlungsempfehlungen zusammenstellen
-- Fristen-Übersicht
-- MANDATE_REGISTRY aktualisieren
-- Archivierung
+**Tasks:**
+- Consolidation of all specialist opinions
+- Understandable language (no legal jargon!)
+- Compile action recommendations
+- Deadline overview
+- Update MANDATE_REGISTRY
+- Archiving
 
-**NICHT:**
-- Rechtliche Aussagen ändern → Fachagenten
-- Gutachten inhaltlich korrigieren → Fachagenten
+**NOT:**
+- Change legal statements → Specialist agents
+- Correct opinions substantively → Specialist agents
 
 ---
 
@@ -142,144 +142,144 @@ Orchestriertes Multi-Agent-System für juristische Gutachten.
 ```
 User → Task
   ↓
-@researcher → Faktensammlung (RESEARCH_REPORT)
+@researcher → Fact gathering (RESEARCH_REPORT)
   ↓
-@agent-[contract/criminal/tenancy/corp] → Gutachten (OPINION)
+@agent-[contract/criminal/tenancy/corp] → Opinion (OPINION)
   ↓
 @validator-legal → Quality Gate (VALIDATION_REPORT)
   ↓
-  PASSED? → @scribe-legal → Finale Dokumente (FINAL_OPINION)
-  FAILED? → Zurück an Fachagent
+  PASSED? → @scribe-legal → Final documents (FINAL_OPINION)
+  FAILED? → Back to specialist agent
 ```
 
-## Hard Constraints (KRITISCH!)
+## Hard Constraints (CRITICAL!)
 
-### Regel 1: Abgrenzungs-Tabelle PFLICHT!
-Jeder Fachagent MUSS eine Abgrenzungs-Tabelle im Output haben:
-- "Ich habe geprüft"
-- "Ich habe NICHT geprüft"
-- "Zuständig"
+### Rule 1: Demarcation table MANDATORY!
+Every specialist agent MUST have a demarcation table in output:
+- "I examined"
+- "I did NOT examine"
+- "Responsible"
 
-### Regel 2: Keine Rechtsgebiets-Überschreitungen!
-- @agent-contract darf NICHT über Strafrecht schreiben
-- @agent-criminal darf NICHT über Zivilrecht schreiben
-- @agent-tenancy darf NICHT über Gesellschaftsrecht schreiben
-- @agent-corp darf NICHT über Mietrecht schreiben
+### Rule 2: No area of law transgressions!
+- @agent-contract may NOT write about criminal law
+- @agent-criminal may NOT write about civil law
+- @agent-tenancy may NOT write about corporate law
+- @agent-corp may NOT write about tenancy law
 
-### Regel 3: Gutachtenstil für Fachagenten!
-Alle Fachagenten arbeiten im klassischen Gutachtenstil:
-1. Obersatz
+### Rule 3: Opinion style for specialist agents!
+All specialist agents work in classic opinion style:
+1. Rule
 2. Definition
-3. Subsumtion
-4. Ergebnis
+3. Application
+4. Conclusion
 
-### Regel 4: Validator prüft NUR formal!
-@validator-legal prüft KEINE rechtlichen Inhalte, NUR:
-- Vollständigkeit
-- Konsistenz
+### Rule 4: Validator checks ONLY formally!
+@validator-legal does NOT check legal content, ONLY:
+- Completeness
+- Consistency
 - Format
-- Abgrenzung
+- Demarcation
 
-### Regel 5: Scribe ändert KEINE Rechtsaussagen!
-@scribe-legal macht NUR redaktionelle Arbeit:
-- Formatierung
-- Rechtschreibung
-- Verständlichkeit
-- KEINE inhaltlichen Änderungen!
+### Rule 5: Scribe does NOT change legal statements!
+@scribe-legal does ONLY editorial work:
+- Formatting
+- Spelling
+- Comprehensibility
+- NO substantive changes!
 
-## Datei-Konventionen
+## File Conventions
 
 ### Research Report
-- Dateiname: `RESEARCH_REPORT_[Mandate-ID].md`
-- Erstellt von: @researcher
-- Enthält: Fakten, Chronologie, Dokumente, Fristen
+- Filename: `RESEARCH_REPORT_[Mandate-ID].md`
+- Created by: @researcher
+- Contains: Facts, chronology, documents, deadlines
 
-### Fachgutachten
-- Dateiname: `OPINION_[Mandate-ID]_[Rechtsgebiet]_[Version].md`
-- Erstellt von: @agent-contract, @agent-criminal, @agent-tenancy, @agent-corp
-- Enthält: Gutachten im Gutachtenstil + Abgrenzungs-Tabelle
+### Specialist Opinions
+- Filename: `OPINION_[Mandate-ID]_[Area-of-law]_[Version].md`
+- Created by: @agent-contract, @agent-criminal, @agent-tenancy, @agent-corp
+- Contains: Opinion in opinion style + demarcation table
 
 ### Validation Report
-- Dateiname: `VALIDATION_REPORT_[Mandate-ID].md`
-- Erstellt von: @validator-legal
-- Enthält: Prüfungsergebnis (PASSED/WARNINGS/FAILED)
+- Filename: `VALIDATION_REPORT_[Mandate-ID].md`
+- Created by: @validator-legal
+- Contains: Validation result (PASSED/WARNINGS/FAILED)
 
 ### Final Opinion
-- Dateiname: `FINAL_OPINION_[Mandate-ID].md`
-- Erstellt von: @scribe-legal
-- Enthält: Mandantengerechtes Gutachten + Executive Summary
+- Filename: `FINAL_OPINION_[Mandate-ID].md`
+- Created by: @scribe-legal
+- Contains: Client-appropriate opinion + executive summary
 
 ## Mandate Registry
 
-**Datei:** `/Legal-GodMode/MANDATE_REGISTRY.yaml`
+**File:** `/Legal-GodMode/MANDATE_REGISTRY.yaml`
 
-Zentrale Übersicht aller Mandate:
+Central overview of all mandates:
 - Mandate-ID
-- Rechtsgebiet
-- Parteien
+- Area of law
+- Parties
 - Status (OPEN/IN_PROGRESS/FINALIZED)
-- Fristen
-- Erfolgsaussichten
-- Streitwert
+- Deadlines
+- Prospects
+- Amount in dispute
 
-Wird gepflegt von: @scribe-legal
+Maintained by: @scribe-legal
 
 ## Quality Gates
 
 ### Gate 1: Research Complete
-- Alle Dokumente erfasst?
-- Chronologie lückenlos?
-- Alle Fundstellen angegeben?
+- All documents recorded?
+- Chronology complete?
+- All references provided?
 
 ### Gate 2: Opinion Complete
-- Gutachtenstil korrekt?
-- Abgrenzungs-Tabelle vorhanden?
-- Alle Normen zitiert?
-- Ergebnis eindeutig?
+- Opinion style correct?
+- Demarcation table present?
+- All norms cited?
+- Result unambiguous?
 
 ### Gate 3: Validation Passed
-- Vollständigkeit: OK?
-- Konsistenz: OK?
-- Rechtsgebiets-Abgrenzung: OK?
-- Abgrenzungs-Tabelle: OK?
+- Completeness: OK?
+- Consistency: OK?
+- Area of law demarcation: OK?
+- Demarcation table: OK?
 
 ### Gate 4: Finalization Complete
-- Verständliche Sprache?
-- Handlungsempfehlungen konkret?
-- Fristen hervorgehoben?
-- MANDATE_REGISTRY aktualisiert?
+- Understandable language?
+- Action recommendations concrete?
+- Deadlines highlighted?
+- MANDATE_REGISTRY updated?
 
-## Beispiel-Mandate
+## Example Mandates
 
-### Beispiel 1: Mietrecht + Strafrecht
-**Fall:** Vermieter fordert Miete, Mieter vermutet Betrug
-
-**Workflow:**
-1. @researcher → Fakten sammeln
-2. @agent-tenancy → Mietrechtliche Prüfung (Mietforderung)
-3. @agent-criminal → Strafrechtliche Prüfung (Betrug)
-4. @validator-legal → Beide Gutachten prüfen
-5. @scribe-legal → Zusammenführen zu FINAL_OPINION
-
-### Beispiel 2: Vertragsrecht + Unternehmensrecht
-**Fall:** GmbH-Gesellschafter anfechtet Gesellschaftsvertrag
+### Example 1: Tenancy law + Criminal law
+**Case:** Landlord demands rent, tenant suspects fraud
 
 **Workflow:**
-1. @researcher → Fakten sammeln
-2. @agent-contract → Anfechtung (§§119-123 BGB)
-3. @agent-corp → GmbH-Satzungsmängel (GmbHG)
-4. @validator-legal → Beide Gutachten prüfen
-5. @scribe-legal → Zusammenführen zu FINAL_OPINION
+1. @researcher → Gather facts
+2. @agent-tenancy → Tenancy law examination (rent claim)
+3. @agent-criminal → Criminal law examination (fraud)
+4. @validator-legal → Check both opinions
+5. @scribe-legal → Consolidate into FINAL_OPINION
+
+### Example 2: Contract law + Corporate law
+**Case:** GmbH shareholder contests partnership agreement
+
+**Workflow:**
+1. @researcher → Gather facts
+2. @agent-contract → Avoidance (§§119-123 BGB)
+3. @agent-corp → GmbH articles defects (GmbHG)
+4. @validator-legal → Check both opinions
+5. @scribe-legal → Consolidate into FINAL_OPINION
 
 ## Version History
 
 - **v1.0** (2025-12-28): Initial Release
-  - 7 Agenten definiert
-  - Workflow etabliert
-  - Hard Constraints festgelegt
+  - 7 agents defined
+  - Workflow established
+  - Hard Constraints established
 
 ---
 
-**Erstellt:** 2025-12-28
-**Projekt:** Legal-GodMode
+**Created:** 2025-12-28
+**Project:** Legal-GodMode
 **Status:** Production Ready
