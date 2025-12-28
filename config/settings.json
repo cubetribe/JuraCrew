@@ -1,0 +1,89 @@
+{
+  "model": "claude-sonnet-4-5",
+  "agentModels": {
+    "researcher": "claude-sonnet-4-5",
+    "agent-contract": "claude-opus-4-5",
+    "agent-criminal": "claude-opus-4-5",
+    "agent-tenancy": "claude-opus-4-5",
+    "agent-corp": "claude-opus-4-5",
+    "validator-legal": "claude-sonnet-4-5",
+    "scribe-legal": "claude-sonnet-4-5"
+  },
+  "hooks": {
+    "postResearcher": {
+      "trigger": "FACTS_*.md created",
+      "action": "Start parallel Fachagenten based on identified Rechtsgebiete",
+      "autoExecute": true
+    },
+    "postFachagenten": {
+      "trigger": "All assigned OPINION_*.md created",
+      "action": "Start @validator-legal",
+      "autoExecute": true
+    },
+    "postValidatorApproved": {
+      "trigger": "VALIDATION_REPORT_*.md with status APPROVED",
+      "action": "Start @scribe-legal",
+      "autoExecute": true
+    },
+    "postValidatorRevise": {
+      "trigger": "VALIDATION_REPORT_*.md with status REVISE",
+      "action": "Restart affected Fachagenten with correction notes",
+      "autoExecute": true
+    }
+  },
+  "workflow": {
+    "gateAgent": "@researcher",
+    "synthesizer": "@scribe-legal",
+    "qualityGate": "@validator-legal",
+    "parallelAgents": [
+      "@agent-contract",
+      "@agent-criminal",
+      "@agent-tenancy",
+      "@agent-corp"
+    ]
+  },
+  "allowedCommands": [
+    "git",
+    "ls",
+    "mkdir",
+    "touch",
+    "rm",
+    "cp",
+    "mv"
+  ],
+  "deniedPaths": {
+    "read": [],
+    "write": [
+      "**/.env",
+      "**/*.pem",
+      "**/*.key"
+    ]
+  },
+  "autoApprove": {
+    "read": true,
+    "write": false,
+    "bash": false
+  },
+  "workspace": {
+    "rootPath": ".",
+    "agentsPath": "agents",
+    "mandatesPath": "mandates",
+    "templatesPath": "templates"
+  },
+  "git": {
+    "author": {
+      "name": "Dennis Westermann",
+      "email": "d.westermann@ol-mg.de"
+    },
+    "requireApprovalForPush": true,
+    "commitMessagePrefix": "legal:"
+  },
+  "legalMode": {
+    "enabled": true,
+    "anonymizeData": true,
+    "requireSourceCitations": true,
+    "minSourcesPerQuestion": 2,
+    "enforceGutachtenstil": true,
+    "enforceAbgrenzungstabelle": true
+  }
+}

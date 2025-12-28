@@ -1,0 +1,53 @@
+# Mandatsakten (enthalten vertrauliche Daten)
+mandates/
+!mandates/.gitkeep
+
+# Finale Dokumente (nicht versioniert)
+*.final.md
+*.final.pdf
+*.final.docx
+
+# Credentials & Secrets
+.env
+.env.local
+.env.production
+*.pem
+*.key
+*.p12
+credentials.json
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Build Outputs
+dist/
+build/
+out/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporäre Dateien
+*.tmp
+*.temp
+*.log
+
+# Claude Code Cache
+.claude-cache/
+
+# Agent Reports (optional - je nach Präferenz)
+# Agents/
+# !Agents/.gitkeep
